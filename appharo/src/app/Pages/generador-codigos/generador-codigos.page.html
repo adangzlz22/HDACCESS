@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="color">
+    <ion-title color="light">Generador De Codigos QR</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+
+
+  <ion-item *ngIf="this.Nivel==2">
+    <ion-label>Residencia</ion-label>
+    <ion-select  ok-text="Aceptar" cancel-text="Cancelar"  
+        [(ngModel)]="PKResidencia" >
+      <ion-select-option *ngFor="let item of lstResidencias" 
+      [value]="item.PKResidencia" >{{item.NombreResidencia}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br><br><br>
+  <ion-button (click)="presentAlertConfirm()" color="success" expand="block" shape="round" fill="outline">Generar nuevos codigos QR</ion-button>
+    
+
+</ion-content>

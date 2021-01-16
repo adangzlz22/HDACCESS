@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar class="color">
+        <ion-title color="light">Mis quejas o sugerencias</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="padding">
+        <ion-item *ngFor="let item of lstMisQuejas" (click)="VerDetalles(item)">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-icon slot="end" name="arrow-forward" (click)="VerDetalles(item)"></ion-icon>
+            <ion-label>
+                <h2>{{item.Tipo}}</h2>
+                <p>{{item.FechaAsignacion}}</p>
+                <ion-chip *ngIf="item.Estatus==1" outline color="danger">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf="item.Estatus==2" outline color="warning">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf="item.Estatus==3" outline color="success">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+            </ion-label>
+        </ion-item>
+        
+    </div>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="danger" (click)="AgregarQueja()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

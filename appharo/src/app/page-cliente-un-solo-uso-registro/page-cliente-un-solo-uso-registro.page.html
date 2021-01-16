@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">{{NombrePagina}}</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref=""></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br><br><br>
+    <div class="padding">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="person" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)]="evento.NombreCompleto" placeholder="Nombre completo"></ion-input>
+        </ion-item>
+        <ion-item *ngIf='WhatCorreo==1'>
+            <ion-icon style=" color : #FF8225 " name="logo-whatsapp" slot="start"></ion-icon>
+            <ion-input type="number" [(ngModel)]="evento.TelefonoOCorreo" placeholder="Whatsapp"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf='WhatCorreo==0'>
+            <ion-icon style=" color : #FF8225 " name="logo-whatsapp" slot="start"></ion-icon>
+            <ion-input type="text" [(ngModel)]="evento.TelefonoOCorreo" placeholder="Correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="chatboxes" slot="start"></ion-icon>
+            <ion-textarea [(ngModel)]="evento.Descripcion" placeholder="Descripción"></ion-textarea>
+        </ion-item>
+        <br>
+
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline" (click)="Guardar()">Guardar</ion-button>
+        <ion-button color="danger" expand="block" shape="round" fill="outline" (click)="Mensajes()" *ngIf="this.verBtnEliminar">Eliminar</ion-button>
+    </div>
+
+</ion-content>

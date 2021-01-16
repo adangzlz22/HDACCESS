@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar class="color">
+      <ion-title color="light">Estado de cuenta</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="padding">
+      <ion-item>
+          <ion-label>Seleccionar año</ion-label>
+          <ion-select [(ngModel)]="anoSeleccionado" (ionChange)="obtener($event)">
+              <ion-select-option *ngFor="let item of anos" [value]="item">{{item}}</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <br>
+      <ion-card *ngFor="let item of registros">
+          <ion-card-header>
+              <ion-card-title>{{item.usuario}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.residencia}}
+              <br> Fecha: {{item.fechaCreacion}} a {{item.fechaExpiracion}}
+              <br> Tipo: {{item.tipoPago}}
+              <br> Pago: ${{item.total}}
+          </ion-card-content>
+          <ion-item>
+              <ion-card-content>Fecha: {{item.fechaCreacion}} </ion-card-content>
+              <ion-note slot="end" style="padding-left:0px!important;">{{item.fechaPago}}</ion-note>
+          </ion-item>
+      </ion-card>
+  </div>
+</ion-content>

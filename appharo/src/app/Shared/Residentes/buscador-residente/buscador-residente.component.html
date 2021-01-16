@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="color">
+    <ion-title color="light">Residentes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style = " color : #fff "  defaultHref="page-cliente-dashboard"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+   
+    <ion-item>
+      <ion-searchbar [(ngModel)]="NombreCompleto" (keyup.enter)="ObtenerUsuarios()"></ion-searchbar>
+    </ion-item>
+   
+    <ion-item *ngFor="let item of DatosUsuarios" >
+      <ion-avatar slot="start">
+        <img src="../assets/img/user.png">
+      </ion-avatar>
+      <ion-label (click)="retornarUsuario(item)"> 
+        <h2>{{item.NombreCompleto}}</h2>
+        <p>{{item.Correo}}</p>
+        <p>{{item.Telefono}}</p>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+
+</ion-content>

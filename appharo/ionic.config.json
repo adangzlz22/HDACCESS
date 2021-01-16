@@ -1,0 +1,7 @@
+{
+  "name": "HarodoorApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

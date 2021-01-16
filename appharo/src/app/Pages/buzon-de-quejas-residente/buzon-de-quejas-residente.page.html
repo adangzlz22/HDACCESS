@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Buzon de quejas</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="padding">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="chatboxes" slot="start"></ion-icon>
+            <ion-textarea placeholder="Tipo" [(ngModel)]="Tipo"></ion-textarea>
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="chatboxes" slot="start"></ion-icon>
+            <ion-textarea placeholder="Descripción" [(ngModel)]="Descripcion"></ion-textarea>
+        </ion-item>
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline" (click)="CrearBuzonDeQuejas()">Enviar</ion-button>
+    </div>
+
+</ion-content>

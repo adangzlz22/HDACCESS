@@ -1,0 +1,16 @@
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbNegPago.deps.json
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbNegPago.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbNegPago.pdb
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbDatPago.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbModPago.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbUtileria.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbDatPago.pdb
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbModPago.pdb
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\bin\Debug\netcoreapp3.1\ClbUtileria.pdb
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.csprojAssemblyReference.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.csproj.CoreCompileInputs.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.AssemblyInfoInputs.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.AssemblyInfo.cs
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.csproj.CopyComplete
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsNegPago\obj\Debug\netcoreapp3.1\ClbNegPago.pdb

@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Residenciales</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-searchbar [(ngModel)]="NombreResidencia" (keyup.enter)="ObtenerResidencias()"></ion-searchbar>
+        </ion-item>
+        <ion-item *ngFor="let item of DatosResidencias">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-icon slot="end" name="arrow-forward" (click)="Actualizar(item)"></ion-icon>
+            <ion-label (click)="Actualizar(item)">
+                <h2>{{ item.NombreResidencia }}</h2>
+                <p> {{ item.FKDiasActivados }}</p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="danger" (click)="AgregarNuevo()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

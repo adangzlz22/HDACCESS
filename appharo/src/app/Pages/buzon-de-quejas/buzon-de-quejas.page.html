@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Buzon de quejas y sugerencias</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="padding">
+        <!-- <ion-item>
+            <ion-label>Tipo</ion-label>
+            <ion-select value="Seguridad">
+                <ion-select-option value="Seguridad">Seguridad</ion-select-option>
+                <ion-select-option value="GYM">GYM</ion-select-option>
+                <ion-select-option value="Comedor">Comedor</ion-select-option>
+                <ion-select-option value="Jardin">Jardin</ion-select-option>
+            </ion-select>
+        </ion-item>
+-->
+        <ion-item>
+            <ion-label>Estatus</ion-label>
+            <ion-select [(ngModel)]="Estatus" (ionChange)="onChange($event)">
+                <ion-select-option value="-1">Todos</ion-select-option>
+                <ion-select-option value="1">Pendiente</ion-select-option>
+                <ion-select-option value="2">Activo</ion-select-option>
+                <ion-select-option value="3">Resuelto</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item *ngFor="let item of lstMisQuejas" (click)="VerDetalles(item)">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-icon slot="end" name="arrow-forward" (click)="VerDetalles(item)"></ion-icon>
+            <ion-label>
+                <h2>{{item.Tipo}}</h2>
+                <p>{{item.NombreCompleto}}</p>
+                <p>{{item.FechaAsignacion}}</p>
+                <ion-chip *ngIf="item.Estatus==1" outline color="danger">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf="item.Estatus==2" outline color="warning">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf="item.Estatus==3" outline color="success">
+                    <ion-label>{{item.DescripcionEstatus}}</ion-label>
+                </ion-chip>
+            </ion-label>
+        </ion-item>
+
+    </div>
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Registro de permisos</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref=""></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="padding">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="checkmark-circle-outline" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Nombre del permiso"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Modulo usuarios</ion-label>
+            <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option value="lunes">Agregar</ion-select-option>
+                <ion-select-option value="martes">Editar</ion-select-option>
+                <ion-select-option value="miercoles">Eliminar</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Modulo residencias</ion-label>
+            <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option value="lunes">Agregar</ion-select-option>
+                <ion-select-option value="martes">Editar</ion-select-option>
+                <ion-select-option value="miercoles">Eliminar</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Modulo permisos</ion-label>
+            <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option value="lunes">Agregar</ion-select-option>
+                <ion-select-option value="martes">Editar</ion-select-option>
+                <ion-select-option value="miercoles">Eliminar</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Modulo roles</ion-label>
+            <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option value="lunes">Agregar</ion-select-option>
+                <ion-select-option value="martes">Editar</ion-select-option>
+                <ion-select-option value="miercoles">Eliminar</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline">Guardar</ion-button>
+        <ion-button color="danger" expand="block" shape="round" fill="outline">Eliminar</ion-button>
+    </div>
+
+
+</ion-content>

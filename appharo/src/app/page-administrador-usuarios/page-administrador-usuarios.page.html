@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">{{NombrePagina}}</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+        <ion-item>
+            <ion-searchbar [(ngModel)]="NombreCompleto" (keyup.enter)="ObtenerUsuarios()"></ion-searchbar>
+        </ion-item>
+
+        <ion-item *ngFor="let item of DatosUsuarios">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-icon slot="end" name="arrow-forward" (click)="ActualizarUsuarios(item)"></ion-icon>
+            <ion-label (click)="ActualizarUsuarios(item)">
+                <h2>{{item.NombreCompleto}}</h2>
+                <p>{{item.Correo}}</p>
+                <p>{{item.Telefono}}</p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="danger" (click)="MoverAgregarUsuario()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

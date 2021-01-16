@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Registro de roles</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-administrador-roles"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="padding">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="checkmark-circle-outline" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Nombre del rol"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="chatboxes" slot="start"></ion-icon>
+            <ion-textarea placeholder="Descripción del rol"></ion-textarea>
+        </ion-item>
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline">Guardar</ion-button>
+        <ion-button color="danger" expand="block" shape="round" fill="outline">Eliminar</ion-button>
+    </div>
+
+
+</ion-content>

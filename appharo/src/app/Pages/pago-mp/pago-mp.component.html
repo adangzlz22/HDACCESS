@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar class="color">
+      <ion-title color="light">{{step==1 ?'Selecciona suscripcion' : 'Datos tarjeta'}}</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="padding" *ngIf="step == 1">
+    <ion-item>
+      <ion-label>Suscripción</ion-label>
+      <ion-select (ionChange)="setTotal($event)" >
+          <ion-select-option *ngFor="let tipo of tiposSuscripciones" [value]='tipo'>{{tipo.tipoSuscripcion}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-label>
+        <p>Tipo de pago: tarjeta.</p>
+        <ion-item *ngIf="pago.Total">
+            <ion-note slot="end">TOTAL: ${{pago.Total}}</ion-note>
+        </ion-item>
+    </ion-label>
+    <br>
+    <ion-button color="success" expand="block" shape="round" fill="outline" (click)="step = 2;">Siguiente</ion-button>
+  </div>
+
+
+  <div class="padding" *ngIf="step == 2">
+    <!-- primero -->
+    <!-- <ion-item>
+              <ion-label for="description">Descripción</ion-label>                        
+              <ion-input type="text" name="description" id="description" value="Ítem seleccionado"></ion-input>
+          </ion-item>                    
+          <ion-item>
+              <ion-label for="transaction_amount">Monto a pagar</ion-label>                        
+              <ion-input name="transaction_amount" id="transaction_amount" value="100" ></ion-input>
+          </ion-item> -->
+    <!-- segundo -->
+    <!-- <ion-item>
+      <ion-label for="email">Email</ion-label>
+      <ion-input type="email" id="email" name="email" value="test@test.com"></ion-input>
+    </ion-item>   -->
+ <div class="padding">
+      
+        <!-- <ion-item>
+            <ion-icon style=" color : #FF8225 " name="ios-card" slot="start"></ion-icon>
+            <ion-input type="number" placeholder="Número de la tarjeta"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="person" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Nombre y apellido"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="calendar" slot="start"></ion-icon>
+            <ion-datetime value="05/2020" placeholder="MM/AA"></ion-datetime>
+        </ion-item>
+        <img src="../assets/img/back.png">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="ios-medical" slot="start"></ion-icon>
+            <ion-input type="number" placeholder="Código de seguridad"></ion-input>
+        </ion-item>
+        <br> -->
+    </div>
+    <form action="" method="post" id="pay" name="pay" *ngIf="step == 2">
+      <fieldset style="border: none;">
+        <img src="assets/img/MP/front.png">
+        <br>
+        <ion-item>
+          <ion-icon style=" color : #FF8225 " name="ios-card" slot="start"></ion-icon>
+          <!-- // (keyup)="validarCardNumber($event)"  -->
+          <ion-input type="text" id="cardNumber" [(ngModel)]="cardNumberRef" placeholder="Número de la tarjeta" [ngModelOptions]="{standalone: true}" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off (change)="guessPaymentMethod(e)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon style=" color : #FF8225 " name="person" slot="start"></ion-icon>
+          <ion-input type="text" id="cardholderName"  placeholder="Nombre y Apellido"  data-checkout="cardholderName"></ion-input>
+        </ion-item>   
+        <ion-item>
+          <ion-icon style=" color : #FF8225 " name="calendar" slot="start"></ion-icon>
+          <!-- <ion-label for="cardExpirationMonth">Mes de vencimiento</ion-label> -->
+          <ion-input type="number" id="cardExpirationMonth" placeholder="Mes de vencimiento" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon style=" color : #FF8225 " name="calendar" slot="start"></ion-icon>
+          <!-- <ion-label for="cardExpirationYear">Año de vencimiento</ion-label> -->
+          <ion-input type="number" id="cardExpirationYear"placeholder="Año de vencimiento" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label for="installments">Mensualidades</ion-label>
+          <ion-select id="installments" class="form-control" name="installments" #selectCuotas (ionChange)="selectCuota($event)" value="0" style="max-width: 8rem;">
+            <ion-select-option value="0">Selecciona una forma de pago</ion-select-option>
+            <ion-select-option *ngFor="let item of Cuotas" [value]="item.installments">{{item.recommended_message}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <img src="assets/img/MP/back.png">
+        <ion-item>
+          <!-- <ion-label for="securityCode">Código de seguridad</ion-label> -->
+          <ion-icon style=" color : #FF8225 " name="ios-medical" slot="start"></ion-icon>
+          <ion-input type="password" id="securityCode" data-checkout="securityCode" placeholder="Código de seguridad" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off ></ion-input>
+        </ion-item>
+          <!-- <ion-item>
+              <ion-label for="docType">Tipo de documento</ion-label>
+              <select id="docType" data-checkout="docType"></select>
+          </ion-item>
+          <ion-item>
+              <ion-label for="docNumber">Número de documento</ion-label>
+              <ion-input type="text" id="docNumber" data-checkout="docNumber"></ion-input>
+          </ion-item> -->
+        <ion-input type="hidden" name="payment_method_id" id="payment_method_id" [(ngModel)]="paymentMethodId" [ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-button color="success" expand="block" shape="round" fill="outline" type="submit"(click)="pagar()">Pagar</ion-button>
+      </fieldset>
+    </form>
+  </div>
+
+</ion-content>

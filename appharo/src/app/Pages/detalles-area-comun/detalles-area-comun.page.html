@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar class="color">
+        <ion-title color="light">Detalles de area comun</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="padding">
+        <ion-item *ngFor="let item of lstAreaComun">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-label>
+                <h2>{{item.NombreCompleto}}</h2>
+                <!-- <p>{{item.Telefono}}</p> -->
+                <p>{{item.Descripcion}}</p>
+                <p>{{item.FechaAsignacion}}</p>
+                <p>{{item.Horario}}</p>
+                <ion-chip outline color="danger">
+                    <ion-label>Ocupado</ion-label>
+                </ion-chip>
+            </ion-label>
+        </ion-item>
+
+    </div>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="danger" (click)="AsignarAreaComun()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+</ion-content>

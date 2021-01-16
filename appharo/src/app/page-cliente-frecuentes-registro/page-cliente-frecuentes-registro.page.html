@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title color="light">Registro de frecuentes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style = " color : #fff "  defaultHref=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br><br><br>
+  <div class="padding">
+    <ion-item>
+      <ion-icon style = " color : #FF8225 " name="person" slot="start"></ion-icon>
+      <ion-input type="text" placeholder="Nombre completo"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-icon style = " color : #FF8225 " name="logo-whatsapp" slot="start"></ion-icon>
+      <ion-input type="number" placeholder="Whatsapp"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-icon style = " color : #FF8225 " name="chatboxes" slot="start"></ion-icon>
+      <ion-textarea placeholder="Descripción"></ion-textarea>
+    </ion-item>
+    <br>
+    <br>
+    <ion-button color="success" expand="block" shape="round" fill="outline">Guardar</ion-button>
+    <ion-button color="danger" expand="block" shape="round" fill="outline">Eliminar</ion-button>
+  </div>
+
+</ion-content>

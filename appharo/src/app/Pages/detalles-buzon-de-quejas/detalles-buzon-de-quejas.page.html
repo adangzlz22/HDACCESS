@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar class="color">
+        <ion-title color="light">Detalles de quejas</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="padding" ALIGN="justify">
+
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>{{NombreCompleto}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <br> Fecha: {{DescripcionEstatus}}
+                <br> Tipo: {{Tipo}}
+                <br> Telefono: {{Telefono}}
+                <br> Mensaje: {{DescripcionArea}}
+            </ion-card-content>
+        </ion-card>
+        <br>
+    
+    </div>
+
+</ion-content>

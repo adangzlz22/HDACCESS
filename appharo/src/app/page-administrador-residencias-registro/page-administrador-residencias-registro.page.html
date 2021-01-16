@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Registro de residencias</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-administrador-residencias"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+    <div class="padding">
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="home" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Nombre de residencia" [(ngModel)]="NombreResidencia"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="keypad" slot="start"></ion-icon>
+            <ion-input type="number" placeholder="Número de visitas frecuentes" [(ngModel)]="LimVisitasFrecuentes"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon style=" color : #FF8225 " name="keypad" slot="start"></ion-icon>
+            <ion-input type="number" placeholder="Número de visitas de un solo uso" [(ngModel)]="LimVisitasUnSoloUso"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Actualizacion de periodo</ion-label>
+                <ion-select [(ngModel)]="selectedCodeValue" name="selectCode" 
+                multiple="true" placeholder="Tap to select.." [selectedText]="selectedCodeValue"
+                (ionChange)="funciones()" required >
+                      <ion-select-option  (ionChange)="funciones()" *ngFor="let code of lstDias" value="{{code.Id}}">
+                          {{code.Dia}}
+                      </ion-select-option>
+                </ion-select>
+          </ion-item>
+        <ion-item>
+            <ion-label>Correo / WhatsApp</ion-label>
+            <ion-toggle slot="start" name="cherry" color="danger" [(ngModel)]="WhatsappCorreo"></ion-toggle>
+        </ion-item>
+        <ion-item *ngIf="Desaparecer">
+            <ion-icon style=" color : #FF8225 " name="lock" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Token" [(ngModel)]="TokenMercado"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="Desaparecer">
+            <ion-icon style=" color : #FF8225 " name="lock" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Key" [(ngModel)]="KeyMercado"></ion-input>
+        </ion-item>
+        <ion-item >
+            <ion-label>Selecionar Nivel</ion-label>
+            <ion-select [(ngModel)]="Dispositivo"  >
+              <ion-select-option *ngFor="let item of lst" [value]="item">{{item.NombreDispositivo}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+            <ion-item>
+                <ion-label>Fecha Dia Asignado</ion-label>
+                <ion-datetime value="1990-02-19" placeholder="Select Date" [(ngModel)]="FechaExpiracion"></ion-datetime>
+            </ion-item>
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline" (click)="Guardar()">{{ ModificTexto }}</ion-button>
+        <ion-button *ngIf="Desaparecer" color="danger" expand="block" shape="round" fill="outline" (click)="Eliminar()">Eliminar</ion-button>
+    </div>
+
+</ion-content>

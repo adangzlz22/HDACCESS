@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title color="light">Asignar area comun</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="padding">
+        <ion-button color="secondary" expand="block" shape="round" fill="outline" (click)="buscarResidente()">Seleccionar residente</ion-button>
+        <ion-item>
+            <ion-label>Nombre </ion-label>
+            <ion-input type="text" [(ngModel)]="NombreCompleto" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Fecha Dia Asignado</ion-label>
+            <ion-datetime value="1990-02-19" placeholder="Select Date" [(ngModel)]="FechaAsignacion"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Horario Inicial</ion-label>
+            <ion-datetime display-format="h:mm A" picker-format="h:mm A" [(ngModel)]="HorarioInicial"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Horario Final</ion-label>
+            <ion-datetime display-format="h:mm A" picker-format="h:mm A" [(ngModel)]="HorarioFinal"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="Escribir area comun" [(ngModel)]="Descripcion"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="success" expand="block" shape="round" fill="outline" (click)="CrearAreaComun()">Guardar</ion-button>
+
+        <ion-button color="danger" expand="block" shape="round" fill="outline" (click)="Cancelar()">Cancelar</ion-button>
+    </div>
+</ion-content>

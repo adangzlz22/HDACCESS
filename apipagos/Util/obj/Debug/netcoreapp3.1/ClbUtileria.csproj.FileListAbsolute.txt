@@ -1,0 +1,9 @@
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\bin\Debug\netcoreapp3.1\ClbUtileria.deps.json
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\bin\Debug\netcoreapp3.1\ClbUtileria.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\bin\Debug\netcoreapp3.1\ClbUtileria.pdb
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.csprojAssemblyReference.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.csproj.CoreCompileInputs.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.AssemblyInfoInputs.cache
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.AssemblyInfo.cs
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.dll
+C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Debug\netcoreapp3.1\ClbUtileria.pdb

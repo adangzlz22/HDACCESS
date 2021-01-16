@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+<ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">HD-Access</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="CreatePopOver( $event )">
+        <ion-icon color="light" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <br><br>
+ <ion-card>
+
+ <ion-card-content *ngIf="this._UsuPro.PKNivel==0">
+  <label for="">{{NombreResidencia}}</label>
+   </ion-card-content>
+  </ion-card>
+
+        <ion-card>
+          <ion-card-header *ngIf="ApareceImagen">
+            <ion-card-title style="width: 100%; text-align: center;"><h3>Codigo de Acceso</h3></ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content *ngIf="ApareceImagen">
+            <img [src]="ObtenerImagen()"/>
+          </ion-card-content>
+
+          <ion-card-content *ngIf="this._UsuPro.PKNivel==2">
+            <img src="../assets/img/splash.png"/>
+          </ion-card-content>
+     
+          <ion-card-content *ngIf="this._UsuPro.PKNivel==0">
+            <img src="../assets/img/splash.png"/>
+          </ion-card-content>
+        </ion-card>
+        
+
+  <ion-split-pane>
+    <ion-menu contentId="content">
+  <ion-content>
+    <ion-list *ngFor="let item of DatosMenu">
+      
+        <ion-item (click)="this.Direccion( item )"><ion-icon name="{{item.Icono}}" slot="start"></ion-icon>{{item.Opcion1}}</ion-item>
+   
+    </ion-list>
+  </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content" main></ion-router-outlet>
+  </ion-split-pane>
+</ion-content>
+
+ 

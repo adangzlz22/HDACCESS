@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="padding">
+    
+    <div class="logo">
+      <ion-icon color="light" name="contact"></ion-icon>
+      <!-- <ion-icon color="light" name="contact"></ion-icon> -->
+      <!-- <ion-icon color="light" name="cloudy-night"></ion-icon> -->
+      <!-- <img src="../../assets/logo.png"> -->
+    </div>
+
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmit($value)">
+
+
+     
+   
+     
+      <ion-item >
+        <ion-icon color="light" name="mail" slot="start"></ion-icon>
+        <ion-input color="light" 
+                    type="email" 
+                    name="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    placeholder="Correo electronico" 
+                    [(ngModel)]="Correo" required></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-icon color="light" name="lock" slot="start"></ion-icon>
+        <ion-input color="light" name="password" type="password" placeholder="Contraseña" [(ngModel)]="Contrasena"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+      <ion-button color="light" 
+      expand="block" 
+      name="inciar"
+      shape="round" 
+      fill="outline" 
+      (click)="Login()"
+      [disabled]="formulario.invalid">Iniciar Sesión</ion-button>
+    </form>
+
+   
+
+    <ion-item>
+      <ion-label color="light">Recordar contrasena</ion-label>
+      <ion-checkbox color="light" slot="end" [ngModel]="Recordar" (ionChange)="CheckBox($event)"></ion-checkbox>
+    </ion-item>
+  </div>
+</ion-content>

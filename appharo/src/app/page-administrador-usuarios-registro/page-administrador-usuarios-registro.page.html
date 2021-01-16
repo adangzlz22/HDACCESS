@@ -1,0 +1,78 @@
+<ion-content>
+
+  <div class="header">
+    <ion-buttons slot="start">
+    <ion-back-button style = " color : #fff "  defaultHref="page-administrador-usuarios"></ion-back-button>
+  </ion-buttons>
+    <h2>Perfil del usuario</h2>
+  </div>
+  <div class="flex">
+    <div class="border-blue">
+      <div class="border-white">
+        <div class="img-box">
+          <img src="../assets/img/user.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="padding">
+    <ion-item>
+      <ion-icon style = " color : #FF8225 " name="person" slot="start"></ion-icon>
+      <ion-input type="text" placeholder="Nombre completo" [(ngModel)]="NombreCompleto"></ion-input>
+    </ion-item>
+  
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+      <ion-label color='light'>
+        {{ texto }}
+     </ion-label>  
+     <ion-item hidden>
+      <ion-input type="text" name="text" [(ngModel)]="valido" hidden>
+        {{formulario.valid}}
+      </ion-input> 
+    </ion-item>  
+      <ion-item >
+        <ion-icon style="color : #FF8225 " name="mail" slot="start"></ion-icon>
+        <ion-input 
+                    type="email" 
+                    name="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    placeholder="Correo electronico" 
+                    [(ngModel)]="Correo" required></ion-input>
+      </ion-item>
+     
+
+      <ion-item >
+        <ion-icon style = " color : #FF8225 " name="lock" slot="start"></ion-icon>
+        <ion-input type="password" name="contraseña" placeholder="Contraseña" [(ngModel)]="ContrasenaVerif"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-icon style = " color : #FF8225 " name="lock" slot="start"></ion-icon>
+        <ion-input type="password" name="Confirmación de contraseña" placeholder="Confirmación de contraseña" [(ngModel)]="Contrasena"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-icon style = " color : #FF8225 " name="logo-whatsapp" slot="start"></ion-icon>
+        <ion-input type="number" name="Whatsapp" placeholder="Whatsapp" [(ngModel)]="Telefono"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="AparecerResidencias">
+        <ion-label>Residencia</ion-label>
+        <ion-select  ok-text="Aceptar" name="Residencia" cancel-text="Cancelar" 
+        (ionChange)="Elejir()"  [(ngModel)]="PKResidencia" >
+          <ion-select-option *ngFor="let item of DatosResidencias" 
+          [value]="item.PKResidencia" >{{item.NombreResidencia}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br>
+      <ion-button color="success" expand="block" name="moficar" shape="round" fill="outline" (click)="CrearUsuarios()" [disabled]="formulario.invalid">{{NombreBotonModificar}}</ion-button>
+      <ion-button *ngIf="Desaparecer" color="danger" name="eliminar" expand="block" shape="round" fill="outline" (click)="EliminarUsuarios()">Eliminar</ion-button>
+
+
+
+    </form>
+    
+
+   
+  </div>
+
+</ion-content>
+

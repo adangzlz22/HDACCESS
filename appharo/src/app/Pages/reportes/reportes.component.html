@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="color">
+      <ion-title color="light"> <span>{{titulo}}</span></ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="padding">
+      <ion-searchbar [(ngModel)]="searchBarUser" (ionChange)="llenarText()"></ion-searchbar>
+      <ion-item>
+          <ion-label>Seleccionar año</ion-label>
+          <ion-select [(ngModel)]="anoSelected" (ionChange)="validar()">
+              <ion-select-option value="2020">2020</ion-select-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="modo == 0">
+          <ion-label>Tipo de estatus</ion-label>
+          <ion-select  [(ngModel)]="estatus" (ionChange)="validar()">
+              <ion-select-option value="3">Todos</ion-select-option>
+              <ion-select-option value="1">Pagado</ion-select-option>
+              <ion-select-option value="0">No ha pagado</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item  *ngIf="modo == 0 && total != 0" >
+        <ion-label>Total: ${{total}}</ion-label>
+      </ion-item>
+      <ion-list *ngIf="modo == 0" >
+        <ion-item *ngFor="let item of data">
+            <ion-avatar slot="start">
+                <img src="../assets/img/user.png">
+            </ion-avatar>
+            <ion-icon slot="end" name="arrow-forward" (click)='goToEstadoCuenta(item)'></ion-icon>
+            <ion-label>
+                <h2>{{item.USUARIO}}</h2>
+                <p>{{item.RESIDENCIA}}</p>
+                <ion-chip *ngIf="item.PAGADO" outline color="success">
+                    <ion-label>Pagado</ion-label>
+                </ion-chip>
+                <ion-chip *ngIf="!item.PAGADO" outline color="danger">
+                    <ion-label>No ha pagado</ion-label>
+                </ion-chip>
+            </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="modo == 2">
+        <ion-item *ngFor="let item of datosResidencias">
+          <ion-avatar slot="start">
+            <img src="../assets/img/user.png">
+          </ion-avatar>
+          <ion-icon slot="end" name="arrow-forward" (click)="goToReporteXResidencia(item)"></ion-icon>
+          <ion-label (click)="goToReporteXResidencia(item)">
+            <h2>{{ item.Residencia }}</h2>
+            <p> Total Efectivo: {{ item.TotalEfectivo }}</p>
+            <p> Otros: {{ item.TotalTarjeta }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+  </div>
+</ion-content>
