@@ -134,6 +134,7 @@ let PageAdministradorResidenciasPage = class PageAdministradorResidenciasPage {
     ObtenerResidencias() {
         this._resiProv.ObtenerResidencias(this.NombreResidencia).then(result => {
             this.DatosResidencias = JSON.parse(result['Model']);
+            console.log(this.DatosResidencias);
         }).catch(error => {
             console.log(error);
         });

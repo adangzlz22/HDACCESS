@@ -527,8 +527,8 @@ __webpack_require__.r(__webpack_exports__);
 
 let ConfigProvider = class ConfigProvider {
     constructor() {
-        this.APIURL = 'https://apiharodoor.harodoor.eu/Api/';
-        //APIURL ='http://localhost:50739/Api/';
+        this.APIURL = 'http://apiharodoor.harodoor.eu/Api/';
+        // APIURL ='http://localhost:50739/Api/';
         this.APIURLCODIGOS = 'https://apicodigos.harodoor.eu/Api/';
         this.ApiPagos = 'https://apipagos.harodoor.eu/Api/';
         console.log('Hello ConfigProvider Provider');
@@ -1173,8 +1173,8 @@ let PagosEfectivoComponent = class PagosEfectivoComponent {
                                 }
                                 else {
                                     const alert = yield this.alertCtrl.create({
-                                        header: 'Exito!',
-                                        message: '<strong>Se realizado su pago con exito</strong>',
+                                        header: 'Éxito!',
+                                        message: '<strong>Se realizó su pago con éxito</strong>',
                                         buttons: [
                                             {
                                                 text: 'Aceptar',
@@ -2643,7 +2643,7 @@ let ResidenciasProvider = class ResidenciasProvider {
         });
         return usuario;
     }
-    ActualizarResidencias(PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado) {
+    ActualizarResidencias(PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado, FechaExpiracion) {
         let usuario = new Promise((resolve, reject) => {
             const httpOptions = {
                 headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -2660,7 +2660,8 @@ let ResidenciasProvider = class ResidenciasProvider {
                 Dias: Dias,
                 Dispositivo: Dispositivo,
                 TokenMercado: TokenMercado,
-                KeyMercado: KeyMercado
+                KeyMercado: KeyMercado,
+                FechaExpiracion: FechaExpiracion
             };
             let Peticion = {
                 Model: JSON.stringify(Model),

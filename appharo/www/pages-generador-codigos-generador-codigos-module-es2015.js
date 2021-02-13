@@ -182,18 +182,18 @@ let GeneradorCodigosPage = class GeneradorCodigosPage {
     presentAlertConfirm() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const alert = yield this.alertCtrl.create({
-                header: 'Confirm!',
-                message: ' <strong>Seguro desea generar codigos nuevos</strong>!!!',
+                header: '¡Confirmar!',
+                message: ' <strong>¿Seguro desea generar códigos nuevos?</strong>!!!',
                 buttons: [
                     {
-                        text: 'Cancel',
+                        text: 'Cancelar',
                         role: 'cancel',
                         cssClass: 'secondary',
                         handler: (blah) => {
                             console.log('Confirm Cancel: blah');
                         }
                     }, {
-                        text: 'Okay',
+                        text: 'Confirmar',
                         handler: () => {
                             console.log('Confirm Okay');
                             this.GenerarCodigoDeBarras();

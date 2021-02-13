@@ -43,7 +43,8 @@ namespace ClsDatHarodoor.Residencias
                         objModUsuarios.LimVisitasUnSoloUso = (int)(sqlLeer["LimVisitasUnSoloUso"] != DBNull.Value ? sqlLeer["LimVisitasUnSoloUso"] : 0);
                         objModUsuarios.FKDiasActivados = (int)(sqlLeer["FKDiasActivados"] != DBNull.Value ? sqlLeer["FKDiasActivados"] : 0);
                         objModUsuarios.WhatsappCorreo = (bool)(sqlLeer["WhatsappCorreo"] != DBNull.Value ? sqlLeer["WhatsappCorreo"] : false);
-
+                        objModUsuarios.FechaExpiracion = (DateTime)(sqlLeer["FechaExpiracion"] != DBNull.Value ? sqlLeer["FechaExpiracion"] : null);
+                        
 
                         lstUsuarios.Add(objModUsuarios);
                     }
@@ -365,6 +366,46 @@ namespace ClsDatHarodoor.Residencias
             return lstUsuarios;
         }
 
+        public List<ClsModPeticiones> FechaExpiracion(SqlConnection Con, int PKResidencia,out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModPeticiones> lstPeticiones = new List<ClsModPeticiones>();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+            arrPar.Add(new SqlParameter("@PKResidencia", SqlDbType.Int) { Value = PKResidencia });
+
+
+
+            ClsModPeticiones objModUsuarios = new ClsModPeticiones();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "spFechaExpiracion", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModUsuarios = new ClsModPeticiones();
+
+                        objModUsuarios.Exito = (string)(sqlLeer["Exito"] != DBNull.Value ? sqlLeer["Exito"] : string.Empty);
+
+                        lstPeticiones.Add(objModUsuarios);
+                    }
+                }
+                else
+                {
+                    objModUsuarios = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return lstPeticiones;
+        }
 
 
     }

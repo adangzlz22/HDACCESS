@@ -204,18 +204,18 @@ var GeneradorCodigosPage = /** @class */ (function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.alertCtrl.create({
-                            header: 'Confirm!',
-                            message: ' <strong>Seguro desea generar codigos nuevos</strong>!!!',
+                            header: '¡Confirmar!',
+                            message: ' <strong>¿Seguro desea generar códigos nuevos?</strong>!!!',
                             buttons: [
                                 {
-                                    text: 'Cancel',
+                                    text: 'Cancelar',
                                     role: 'cancel',
                                     cssClass: 'secondary',
                                     handler: function (blah) {
                                         console.log('Confirm Cancel: blah');
                                     }
                                 }, {
-                                    text: 'Okay',
+                                    text: 'Confirmar',
                                     handler: function () {
                                         console.log('Confirm Okay');
                                         _this.GenerarCodigoDeBarras();

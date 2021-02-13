@@ -20,7 +20,7 @@ namespace ClsModHarodoor.Residencias
         public string FechaModificacion { get; set; }
         public Boolean Estatus { get; set; }
         public Boolean WhatsappCorreo { get; set; }
-
+        public DateTime FechaExpiracion { get; set; }
 
         public string IdNivel { get;set;}
         public string NombreNivel { get;set;}

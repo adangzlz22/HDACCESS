@@ -95,6 +95,7 @@
     <Compile Include="Residencias\ClsDispositivo.cs" />
     <Compile Include="Residencias\ClsModParametrosExiste.cs" />
     <Compile Include="Residencias\ClsModParametrosResidencias.cs" />
+    <Compile Include="Residencias\ClsModPeticiones.cs" />
     <Compile Include="Residencias\ClsModResidencias.cs" />
     <Compile Include="Usuarios\ClsModParametrosUsuarios.cs" />
     <Compile Include="Usuarios\ClsModUsuarios.cs" />

@@ -345,7 +345,7 @@ namespace ClsDatHarodoor.Codigos
                 QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
                 QrCode qrCode = new QrCode();
                 qrEncoder.TryEncode( Folio.ToString(), out qrCode);
-                GraphicsRenderer reenderer = new GraphicsRenderer(new FixedCodeSize(400,QuietZoneModules.Zero),Brushes.Black,Brushes.Orange);
+                GraphicsRenderer reenderer = new GraphicsRenderer(new FixedCodeSize(400,QuietZoneModules.Zero),Brushes.Black,Brushes.White);
 
                 MemoryStream ms = new MemoryStream();
 

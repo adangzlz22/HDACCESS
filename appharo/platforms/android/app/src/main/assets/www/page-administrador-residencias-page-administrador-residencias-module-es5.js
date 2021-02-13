@@ -141,6 +141,7 @@ var PageAdministradorResidenciasPage = /** @class */ (function () {
         var _this = this;
         this._resiProv.ObtenerResidencias(this.NombreResidencia).then(function (result) {
             _this.DatosResidencias = JSON.parse(result['Model']);
+            console.log(_this.DatosResidencias);
         }).catch(function (error) {
             console.log(error);
         });

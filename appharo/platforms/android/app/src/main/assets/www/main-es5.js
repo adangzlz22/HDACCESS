@@ -533,8 +533,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var ConfigProvider = /** @class */ (function () {
     function ConfigProvider() {
-        this.APIURL = 'https://apiharodoor.harodoor.eu/Api/';
-        //APIURL ='http://localhost:50739/Api/';
+        this.APIURL = 'http://apiharodoor.harodoor.eu/Api/';
+        // APIURL ='http://localhost:50739/Api/';
         this.APIURLCODIGOS = 'https://apicodigos.harodoor.eu/Api/';
         this.ApiPagos = 'https://apipagos.harodoor.eu/Api/';
         console.log('Hello ConfigProvider Provider');
@@ -1250,8 +1250,8 @@ var PagosEfectivoComponent = /** @class */ (function () {
                                                             console.warn(response.mensajeError);
                                                             return [3 /*break*/, 4];
                                                         case 1: return [4 /*yield*/, this.alertCtrl.create({
-                                                                header: 'Exito!',
-                                                                message: '<strong>Se realizado su pago con exito</strong>',
+                                                                header: 'Éxito!',
+                                                                message: '<strong>Se realizó su pago con éxito</strong>',
                                                                 buttons: [
                                                                     {
                                                                         text: 'Aceptar',
@@ -2777,7 +2777,7 @@ var ResidenciasProvider = /** @class */ (function () {
         });
         return usuario;
     };
-    ResidenciasProvider.prototype.ActualizarResidencias = function (PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado) {
+    ResidenciasProvider.prototype.ActualizarResidencias = function (PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado, FechaExpiracion) {
         var _this = this;
         var usuario = new Promise(function (resolve, reject) {
             var httpOptions = {
@@ -2795,7 +2795,8 @@ var ResidenciasProvider = /** @class */ (function () {
                 Dias: Dias,
                 Dispositivo: Dispositivo,
                 TokenMercado: TokenMercado,
-                KeyMercado: KeyMercado
+                KeyMercado: KeyMercado,
+                FechaExpiracion: FechaExpiracion
             };
             var Peticion = {
                 Model: JSON.stringify(Model),

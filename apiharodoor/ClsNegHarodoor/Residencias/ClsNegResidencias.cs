@@ -5,6 +5,7 @@ using ClsModHarodoor.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -211,6 +212,53 @@ namespace ClsNegHarodoor.Residencias
                     break;
             }
             return lstUsuarios;
+        }
+
+        public List<ClsModPeticiones> FechaExpiracion()
+        {
+            DateTime dt = DateTime.Now;
+            List<ClsModPeticiones> lstPeticion = new List<ClsModPeticiones>();
+
+            //OBTENER LISTA DE RESIDENCIAS
+            ClsModResultado objClsModResultado = new ClsModResultado();
+
+            var a = dt.ToString("dddd", new CultureInfo("es-ES"));
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            ClsModParametrosResidencias objParametroResidencia = new ClsModParametrosResidencias();
+                            objParametroResidencia.NombreResidencia = "";
+
+                            List<ClsModResidencias> lstResidencias = new ClsDatResidencias().ObtenerResidencias(Con,objParametroResidencia,out objClsModResultado);
+                            foreach (var item in lstResidencias)
+                            {
+                                if (item.FechaExpiracion == DateTime.Now)
+                                {
+                                    lstPeticion = new ClsDatResidencias().FechaExpiracion(Con, item.PKResidencia ,out objClsModResultado);
+                                }
+                            }
+                            
+
+                            Con.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return lstPeticion;
         }
 
 

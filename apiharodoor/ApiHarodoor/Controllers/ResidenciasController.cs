@@ -83,8 +83,8 @@ namespace ApiHarodoor.Controllers
 
             return objModResponse;
         }
-        
-                [HttpPost]
+
+        [HttpPost]
         [AllowAnonymous]
         [ActionName("ObtenerNivel")]
         public ClsModResponse ObtenerNivel([FromBody] ClsModRequest objModRequest)
@@ -119,6 +119,24 @@ namespace ApiHarodoor.Controllers
 
             return objModResponse;
         }
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        [ActionName("FechaExpiracion")]
+
+        public ClsModResponse FechaExpiracion()
+        {
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            List<ClsModPeticiones> lstConteoFisico = new ClsNegResidencias(null).FechaExpiracion();
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+
 
     }
 }

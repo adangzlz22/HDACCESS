@@ -50,7 +50,7 @@
               <ion-select-option *ngFor="let item of lst" [value]="item">{{item.NombreDispositivo}}</ion-select-option>
             </ion-select>
           </ion-item>
-            <ion-item>
+            <ion-item *ngIf="Desaparecer">
                 <ion-label>Fecha Dia Asignado</ion-label>
                 <ion-datetime value="1990-02-19" placeholder="Select Date" [(ngModel)]="FechaExpiracion"></ion-datetime>
             </ion-item>
