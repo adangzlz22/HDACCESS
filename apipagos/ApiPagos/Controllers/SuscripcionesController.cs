@@ -20,9 +20,9 @@ namespace ApiPagos.Controllers
             this.appSettings = AppSettings.Value;
         }
         [HttpGet("CargarTipos")]
-        public async Task<JsonResult> CargarTipos()
+        public async Task<JsonResult> CargarTipos(int PKResidencia)
         {
-            return Json(await new ClsNegSuscripcion(appSettings).CargarTipos());
+            return Json(await new ClsNegSuscripcion(appSettings).CargarTipos(PKResidencia));
         }
        
     }

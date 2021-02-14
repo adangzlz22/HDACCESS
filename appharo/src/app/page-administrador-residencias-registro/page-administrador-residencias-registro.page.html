@@ -54,6 +54,12 @@
                 <ion-label>Fecha Dia Asignado</ion-label>
                 <ion-datetime value="1990-02-19" placeholder="Select Date" [(ngModel)]="FechaExpiracion"></ion-datetime>
             </ion-item>
+            <ion-item >
+                <ion-label>Selecionar Departamento</ion-label>
+                <ion-select [(ngModel)]="Departamentos"  >
+                  <ion-select-option *ngFor="let item of lstDepartam" [value]="item">{{item.NombreDepartamento}}</ion-select-option>
+                </ion-select>
+              </ion-item>
         <br>
         <ion-button color="success" expand="block" shape="round" fill="outline" (click)="Guardar()">{{ ModificTexto }}</ion-button>
         <ion-button *ngIf="Desaparecer" color="danger" expand="block" shape="round" fill="outline" (click)="Eliminar()">Eliminar</ion-button>

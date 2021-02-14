@@ -24,5 +24,7 @@ namespace ClsModHarodoor.Residencias
 
         public string IdNivel { get;set;}
         public string NombreNivel { get;set;}
+        public string id { get; set; }
+        public string nombreDepartamento { get; set; }
     }
 }

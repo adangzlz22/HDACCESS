@@ -16,7 +16,7 @@ export class PagosEfectivoComponent implements OnInit, AfterViewChecked {
   @ViewChild('tipoSeleccionado', {static: true}) tipoSeleccionado;
 
   tiposSuscripciones: []
-
+  PKResidencia:any;
   pago = {
     total: 0,
     tipo: 0,
@@ -29,7 +29,8 @@ export class PagosEfectivoComponent implements OnInit, AfterViewChecked {
               public modalCtrl: ModalController,
               private route: ActivatedRoute,
               private cdRef: ChangeDetectorRef,
-              private alertCtrl: AlertController
+              private alertCtrl: AlertController,
+              private _usupro:UsuarioProvider
               ) { }
   ngAfterViewChecked(): void {
     this.cdRef.detectChanges();
@@ -39,20 +40,22 @@ export class PagosEfectivoComponent implements OnInit, AfterViewChecked {
    this.route.queryParams.subscribe(params => {
      if (params['pago']) {
        const objTmp = JSON.parse(params['pago']);
+       console.log('objTmp');
+       console.log(objTmp);
        this.pago.FKUsuario = objTmp.FKUsuario;
        this.pago.tipo = objTmp.tipo;
        this.pago.total = objTmp.total;
-
        // Nombre
        const nameUser: string[] = objTmp.userObj.NombreCompleto.split(' ');
        this.userName = nameUser[0];
      }
     });
-   this.obtenesTipos();
+    this.PKResidencia=this._usupro.FKResidencia;
+   this.obtenesTipos(this.PKResidencia);
   }
 
-  obtenesTipos() {
-    this.suscripciones.cargarTipos().subscribe(
+  obtenesTipos(PKResidencia) {
+    this.suscripciones.cargarTipos(PKResidencia).subscribe(
       (response: any) => {
        // console.log(val);
         if (response.mensajeError) {

@@ -17,10 +17,13 @@ export class PageAdministradorResidenciasRegistroPage implements OnInit {
   LimVisitasUnSoloUso:string;
   Desaparecer:Boolean;
   Dispositivo:any;
+  Departamentos:any;
 Dias:any; 
 FechaExpiracion:any;
 
 lstNivelDispositivos:any;
+lstDepartamentos:any;
+lstDepartam=[];
 lst=[];
 
 IdNivelDispositivo:any;
@@ -67,6 +70,7 @@ lstDias:any=[
 
   ngOnInit() { 
     this.ObtenerNivel();
+    this.ObtenerDepartamento();
     this.lstDiasActivados=[];
    
   }
@@ -108,18 +112,35 @@ lstDias:any=[
     });
   }
 
+  ObtenerDepartamento(){
+    this.ResiProvi.ObtenerDepartamento().then(result=>{
+          this.lstDepartamentos=JSON.parse(result['Model']);
+          for (let i = 0; i < this.lstDepartamentos.length; i++) {
+            const element = {
+              IDDepartamento:this.lstDepartamentos[i].id,
+              NombreDepartamento:this.lstDepartamentos[i].nombreDepartamento
+            };
+            this.lstDepartam.push(element);
+          }
+          console.log(this.lstDepartam);
+          console.log('AQUI ANDO DEPARTAMENTO');
+    }).catch(error=>{
+      console.log(error);
+    });
+  }
+
   Guardar(){
     console.log(this.WhatsappCorreo);
     if (this.Desaparecer==false) {
       console.log(this.Dispositivo);
-      this.ResiProvi.CrearResidencias(this.NombreResidencia,this.LimVisitasFrecuentes,this.LimVisitasUnSoloUso,this.WhatsappCorreo,this.lstDiasActivados,this.Dispositivo).then(result=>{
+      this.ResiProvi.CrearResidencias(this.NombreResidencia,this.LimVisitasFrecuentes,this.LimVisitasUnSoloUso,this.WhatsappCorreo,this.lstDiasActivados,this.Dispositivo,this.Departamentos).then(result=>{
         console.log(result);
         this.navCtrl.pop();
       }).catch(error=>{
         console.log(error);
       });
     }else{
-      this.ResiProvi.ActualizarResidencias(this.PKResidencia,this.NombreResidencia,this.LimVisitasFrecuentes,this.LimVisitasUnSoloUso,this.WhatsappCorreo,this.lstDiasActivados,this.Dispositivo , this.TokenMercado, this.KeyMercado,this.FechaExpiracion).then(result=>{
+      this.ResiProvi.ActualizarResidencias(this.PKResidencia,this.NombreResidencia,this.LimVisitasFrecuentes,this.LimVisitasUnSoloUso,this.WhatsappCorreo,this.lstDiasActivados,this.Dispositivo , this.TokenMercado, this.KeyMercado,this.FechaExpiracion,this.Departamentos).then(result=>{
         console.log(result);
         this.navCtrl.pop();
       }).catch(error=>{

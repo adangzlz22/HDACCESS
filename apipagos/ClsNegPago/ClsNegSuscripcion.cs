@@ -16,9 +16,9 @@ namespace ClbNegPago
             this.appSettings = appSettings;
         }
 
-        public async Task<ClsModResultado> CargarTipos()
+        public async Task<ClsModResultado> CargarTipos(int PKResidencia)
         {
-            return await new ClsDatSuscripcion(appSettings).CargarTipos();
+            return await new ClsDatSuscripcion(appSettings).CargarTipos(PKResidencia);
         }
       
     }

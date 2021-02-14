@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "buMPdITf+wbw5tks/4nIw4pkT0hKoVWfgwqwyegRtv6gHFAoAoZ8Z9SPqDgXtVQg1tw3voZzUqfZuPm6RyXWog==",
+  "dgSpecHash": "5M8SwYuFUyHMqNAzr7u7E4Jj1X1ZE647IxTZxf8mjcq+2vv2lWd2p7iyZARoBuefM+iaZmu26qk7Fda2AkPdDQ==",
   "success": true,
-  "projectFilePath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+  "projectFilePath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\mercadopago-sdk\\1.6.1\\mercadopago-sdk.1.6.1.nupkg.sha512",

@@ -14,9 +14,9 @@ export class SuscripcionesControllerProvider {
         console.log('Hello Menu Provider');
         this.urlPrincipal = this.config.ApiPagos + 'Suscripciones/';
     }
-    cargarTipos() {
+    cargarTipos(PKResidencia) {
       // const httpOptions = {
-      const url = this.urlPrincipal + 'cargarTipos';
+      const url = this.urlPrincipal + 'cargarTipos?PKResidencia='+PKResidencia+'';
       return this.http.get(url);
     }
 }

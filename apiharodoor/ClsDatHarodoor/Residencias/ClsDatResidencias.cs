@@ -119,6 +119,7 @@ namespace ClsDatHarodoor.Residencias
             arrPar.Add(new SqlParameter("@WhatsAppCorreo", SqlDbType.VarChar) { Value = objModel.WhatsAppCorreo });
             arrPar.Add(new SqlParameter("@UsuarioCreacion", SqlDbType.VarChar) { Value = objModel.UsuarioCreacion });
             arrPar.Add(new SqlParameter("@IdNivelDispositivo", SqlDbType.VarChar) { Value = objModel.Dispositivo.IdDispositivo });
+            arrPar.Add(new SqlParameter("@IDDepartamento", SqlDbType.VarChar) { Value = objModel.Departamento.IDDepartamento });
             arrPar.Add(new SqlParameter("@Lunes", SqlDbType.Bit) { Value = Lunes });
             arrPar.Add(new SqlParameter("@Martes", SqlDbType.Bit) { Value = Martes });
             arrPar.Add(new SqlParameter("@Miercoles", SqlDbType.Bit) { Value = Miercoles });
@@ -213,6 +214,10 @@ namespace ClsDatHarodoor.Residencias
             if (objModel.Dispositivo!=null)
             {
                 arrPar.Add(new SqlParameter("@IdNivelDispositivo", SqlDbType.VarChar) { Value = objModel.Dispositivo.IdDispositivo });
+            }
+            if (objModel.Departamento != null)
+            {
+                arrPar.Add(new SqlParameter("@IDDepartamento", SqlDbType.VarChar) { Value = objModel.Departamento.IDDepartamento });
             }
             arrPar.Add(new SqlParameter("@FechaExpiracion", SqlDbType.VarChar) { Value = objModel.FechaExpiracion });
             
@@ -406,6 +411,49 @@ namespace ClsDatHarodoor.Residencias
             }
             return lstPeticiones;
         }
+
+
+        public List<ClsModResidencias> ObtenerDepartamento(SqlConnection Con, ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+
+
+            ClsModResidencias objModResidencia = new ClsModResidencias();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "SPObtenerDepartamento", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModResidencia = new ClsModResidencias();
+
+                        objModResidencia.id = (string)(sqlLeer["id"] != DBNull.Value ? sqlLeer["id"] : string.Empty);
+                        objModResidencia.nombreDepartamento = (string)(sqlLeer["nombreDepartamento"] != DBNull.Value ? sqlLeer["nombreDepartamento"] : string.Empty);
+
+
+                        lstUsuarios.Add(objModResidencia);
+                    }
+                }
+                else
+                {
+                    objModResidencia = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return lstUsuarios;
+        }
+
 
 
     }

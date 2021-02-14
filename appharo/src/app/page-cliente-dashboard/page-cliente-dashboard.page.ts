@@ -116,7 +116,7 @@ ObtenerMenu(){
 }
 
 CargarTotal(){
-  this.TiposSus.cargarTipos().subscribe(
+  this.TiposSus.cargarTipos(this._UsuPro.FKResidencia).subscribe(
     (response: any) => {
      // console.log(val);
       if (response.mensajeError) {

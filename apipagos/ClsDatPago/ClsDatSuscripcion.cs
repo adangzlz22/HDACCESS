@@ -23,16 +23,17 @@ namespace ClbDatPago
             this.appSettings = AppSettings;
 
         }
-        public async Task<ClsModResultado> CargarTipos()
+        public async Task<ClsModResultado> CargarTipos(int PKResidencia)
         {
             ClsModResultado modResultado = new ClsModResultado();
-
+            DynamicParameters lstParametros = new DynamicParameters();
+            lstParametros.Add("@PKResidencia", PKResidencia);
             try
             {
                 using (var conexion = new SqlConnection(appSettings.Conexion))
                 {
-                    var Query = await conexion.QueryAsync<ClsModCatTipoSuscripcion>("SPObtenerTiposSuscripciones", commandType: CommandType.StoredProcedure);
-                    modResultado.resultado = Query.ToArray<ClsModCatTipoSuscripcion>();
+                    var Response = await conexion.QueryAsync<ClsModCatTipoSuscripcion>("SPObtenerTiposSuscripciones", lstParametros, commandType: CommandType.StoredProcedure);
+                    modResultado.resultado = Response.AsList<ClsModCatTipoSuscripcion>();
                 }
             }
             catch (Exception ex)

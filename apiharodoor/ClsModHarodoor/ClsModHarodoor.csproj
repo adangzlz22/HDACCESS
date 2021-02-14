@@ -91,6 +91,7 @@
     <Compile Include="Niveles\ClsModNiveles.cs" />
     <Compile Include="Niveles\ClsModParametrosNiveles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Residencias\ClsDepartamento.cs" />
     <Compile Include="Residencias\ClsDias.cs" />
     <Compile Include="Residencias\ClsDispositivo.cs" />
     <Compile Include="Residencias\ClsModParametrosExiste.cs" />

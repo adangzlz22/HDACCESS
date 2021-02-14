@@ -53,7 +53,7 @@ export class ResidenciasProvider {
     }
 
 
-    CrearResidencias(NombreResidencia:string,LimVisitasFrecuentes:string,LimVisitasUnSoloUso:string,WhatsappCorreo:any,Dias:any,Dispositivo:any) {
+    CrearResidencias(NombreResidencia:string,LimVisitasFrecuentes:string,LimVisitasUnSoloUso:string,WhatsappCorreo:any,Dias:any,Dispositivo:any,Departamentos:any) {
       let usuario = new Promise((resolve,reject) => {
   
       const httpOptions = {
@@ -70,7 +70,8 @@ export class ResidenciasProvider {
         LimVisitasUnSoloUso: LimVisitasUnSoloUso, 
         WhatsAppCorreo:WhatsappCorreo,
         Dias:Dias,
-        Dispositivo:Dispositivo
+        Dispositivo:Dispositivo,
+        Departamento:Departamentos
       };
       let Peticion = {
         Model: JSON.stringify(Model),
@@ -95,7 +96,7 @@ export class ResidenciasProvider {
     return usuario;
     }
 
-    ActualizarResidencias(PKResidencia:any,NombreResidencia:string,LimVisitasFrecuentes:string,LimVisitasUnSoloUso:string,WhatsappCorreo:any,Dias:any,Dispositivo:any,TokenMercado,KeyMercado,FechaExpiracion) {
+    ActualizarResidencias(PKResidencia:any,NombreResidencia:string,LimVisitasFrecuentes:string,LimVisitasUnSoloUso:string,WhatsappCorreo:any,Dias:any,Dispositivo:any,TokenMercado,KeyMercado,FechaExpiracion,Departamentos) {
       let usuario = new Promise((resolve,reject) => {
   
       const httpOptions = {
@@ -116,7 +117,8 @@ export class ResidenciasProvider {
         Dispositivo:Dispositivo,
         TokenMercado:TokenMercado,
         KeyMercado:KeyMercado,
-        FechaExpiracion:FechaExpiracion
+        FechaExpiracion:FechaExpiracion,
+        Departamento:Departamentos
       };
       let Peticion = {
         Model: JSON.stringify(Model),
@@ -188,6 +190,41 @@ export class ResidenciasProvider {
       };
   
       let url = this.url_principal + "ObtenerNivel";
+   
+      let Model = {};
+      let Peticion = {
+        Model: JSON.stringify(Model),
+        TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+        Formato: 2
+      };
+      this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(
+        val => {
+         // console.log(val);
+          if (val != undefined) {
+            resolve(val);
+          }
+        },
+        Error => {
+          console.log("POST call in error", Error);
+          if (Error != undefined) {
+            reject(Error);
+          }
+        }
+      );
+    });
+    return usuario;
+    }
+    
+    ObtenerDepartamento() {
+      let usuario = new Promise((resolve,reject) => {
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+  
+      let url = this.url_principal + "ObtenerDepartamento";
    
       let Model = {};
       let Peticion = {

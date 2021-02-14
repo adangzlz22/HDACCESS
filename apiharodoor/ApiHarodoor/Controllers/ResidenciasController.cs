@@ -102,6 +102,22 @@ namespace ApiHarodoor.Controllers
         }
 
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("ObtenerDepartamento")]
+        public ClsModResponse ObtenerDepartamento([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosResidencias objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosResidencias>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            List<ClsModResidencias> lstUsuarios = new ClsNegResidencias(null).ObtenerDepartamento(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
 
         [HttpPost]
         [AllowAnonymous]

@@ -260,7 +260,37 @@ namespace ClsNegHarodoor.Residencias
             }
             return lstPeticion;
         }
+        public List<ClsModResidencias> ObtenerDepartamento(ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            ClsModResidencias objUsuario = new ClsModResidencias();
 
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            lstUsuarios = new ClsDatResidencias().ObtenerDepartamento(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return lstUsuarios;
+        }
 
     }
 }
