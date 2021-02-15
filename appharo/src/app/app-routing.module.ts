@@ -148,7 +148,11 @@ const routes: Routes = [
   {
     path: 'detallesbuzondequejaadministrador/:PKBuzonDeQueja/:NombreCompleto/:Telefono/:Tipo/:DescripcionArea/:DescripcionEstatus/:Estatus',
     loadChildren: () => import('./pages/detallesbuzondequejaadministrador/detallesbuzondequejaadministrador.module').then( m => m.DetallesbuzondequejaadministradorPageModule)
+  },  {
+    path: 'tags',
+    loadChildren: () => import('./Pages/tags/tags.module').then( m => m.TagsPageModule)
   },
+
 
 
 

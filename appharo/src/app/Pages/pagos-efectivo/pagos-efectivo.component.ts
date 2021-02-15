@@ -51,6 +51,7 @@ export class PagosEfectivoComponent implements OnInit, AfterViewChecked {
      }
     });
     this.PKResidencia=this._usupro.FKResidencia;
+    console.log(this.PKResidencia)
    this.obtenesTipos(this.PKResidencia);
   }
 

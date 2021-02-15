@@ -124,7 +124,7 @@ CargarTotal(){
       }
       this.tiposSuscripciones = response.resultado;
       console.log(this.tiposSuscripciones);
-      this.Total=this.tiposSuscripciones[0].costo;
+      // this.Total=this.tiposSuscripciones[0].costo;
     },
     Error => {
       console.log('POST call in Agregar', Error);
@@ -175,6 +175,10 @@ if (item.Opcion1=="Residentes") {
 }
 if (item.Opcion1=="Roles") {
   this.navCtrl.navigateRoot('page-administrador-roles');
+
+}
+if (item.Opcion1=="Asignar Tags") {
+  this.navCtrl.navigateRoot('tags');
 
 }
 if (item.Opcion1 == 'Pagos') {

@@ -44,15 +44,23 @@ export class BuscadorResidenteComponent {
     this.pago.FKUsuario = item.PKUsuario;
     this.pago.userObj = item;
     const variableNav = this.pago.origen ? this.pago.origen : 'pagoEfectivo';
+    console.log(this.pago)
     console.log(variableNav);
-    if(variableNav!='pagoEfectivo')
+    if(variableNav=='asignar-area-comun')
   {
     this.navCtrl.navigateRoot(``+variableNav+`/${ this.PKUsuario }`,{
       queryParams: {
           pago: JSON.stringify(this.pago),
       }
+    }); 
+  }if(variableNav=='tags'){
+    this.navCtrl.navigateRoot(variableNav, {
+      queryParams: {
+          pago: JSON.stringify(this.pago),
+      }
     });
-  }else{
+  }
+  if(variableNav=='pagoEfectivo'){
     
     this.navCtrl.navigateRoot(variableNav, {
       queryParams: {

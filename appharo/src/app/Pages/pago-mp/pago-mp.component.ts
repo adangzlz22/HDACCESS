@@ -61,7 +61,7 @@ export class PagoMPComponent implements OnInit {
 
     Mercadopago.setPublishableKey(this.key);
     console.log(Mercadopago);
-    this.obtenesTipos();
+    // this.obtenesTipos();
     this.emailClientes = this.usuario.Correo;
     // Mercadopago.getIdentificationTypes(test);
     // function test(a, b) {
@@ -332,23 +332,23 @@ export class PagoMPComponent implements OnInit {
     await alert.present();
   }
 
-  obtenesTipos() {
-    this.suscripciones.cargarTipos().subscribe(
-      (response: any) => {
-       // console.log(val);
-        if (response.mensajeError) {
-          console.warn(response.mensajeError);
-        }
-        console.log(response);
-        this.tiposSuscripciones = response.resultado;
-      },
-      Error => {
-        console.log('POST call in Agregar', Error);
-        if (Error != undefined) {
-            console.warn(Error);
-        }
-      });
-  }
+  // obtenesTipos() {
+  //   this.suscripciones.cargarTipos(this.FKResidencia).subscribe(
+  //     (response: any) => {
+  //      // console.log(val);
+  //       if (response.mensajeError) {
+  //         console.warn(response.mensajeError);
+  //       }
+  //       console.log(response);
+  //       this.tiposSuscripciones = response.resultado;
+  //     },
+  //     Error => {
+  //       console.log('POST call in Agregar', Error);
+  //       if (Error != undefined) {
+  //           console.warn(Error);
+  //       }
+  //     });
+  // }
 
   setTotal(e) {
     this.tiposeleccionado = e.target.value;
