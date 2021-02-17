@@ -181,6 +181,10 @@ if (item.Opcion1=="Asignar Tags") {
   this.navCtrl.navigateRoot('tags');
 
 }
+if (item.Opcion1=="Cuotas") {
+  this.navCtrl.navigateRoot('cuotas');
+
+}
 if (item.Opcion1 == 'Pagos') {
   let page = '', msgError = 'no hay pagina de pagos para este tipo de usuario';
 

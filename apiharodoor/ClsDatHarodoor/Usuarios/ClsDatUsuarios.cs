@@ -55,6 +55,7 @@ namespace ClsDatHarodoor.Usuarios
                         objModUsuarios.KeyMercado = (string)(sqlLeer["KeyMercado"] != DBNull.Value ? sqlLeer["KeyMercado"] : string.Empty);
                         objModUsuarios.IDNivelDispotivo = (string)(sqlLeer["IDNivelDispotivo"] != DBNull.Value ? sqlLeer["IDNivelDispotivo"] : string.Empty);
                         objModUsuarios.Expiracion = (int)(sqlLeer["Expiracion"] != DBNull.Value ? sqlLeer["Expiracion"] : 0);
+                        objModUsuarios.IDDepartamento = (string)(sqlLeer["IDDepartamento"] != DBNull.Value ? sqlLeer["IDDepartamento"] : string.Empty);
                         
 
                         lstConteoFisico.Add(objModUsuarios);
@@ -776,5 +777,41 @@ namespace ClsDatHarodoor.Usuarios
             }
             return lstUsuarios;
         }
+
+        public ClsModUsuarios CrearTAGS(SqlConnection Con, ClsModParametrosTAGS objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModUsuarios objUsuario = new ClsModUsuarios();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+
+            arrPar.Add(new SqlParameter("@PKUsuario", SqlDbType.VarChar) { Value = objModel.PKUsuario });
+            arrPar.Add(new SqlParameter("@person_pin", SqlDbType.VarChar) { Value = objModel.person_pin });
+            arrPar.Add(new SqlParameter("@nombre", SqlDbType.VarChar) { Value = objModel.nombre });
+
+
+            try
+            {
+                objUsuario.Id = SqlHelper.ExecuteScalar(Con, CommandType.StoredProcedure, "SPCrearTAGS", arrPar.ToArray());
+                if (objUsuario.Id != null)
+                {
+                    int Ident = 0;
+                    int.TryParse(objUsuario.Id.ToString(), out Ident);
+                    objUsuario.PKUsuario = Ident;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return objUsuario;
+        }
+
+
+
     }
 }

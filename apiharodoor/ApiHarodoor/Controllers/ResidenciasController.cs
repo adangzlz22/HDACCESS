@@ -153,6 +153,92 @@ namespace ApiHarodoor.Controllers
             return objModResponse;
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("CuotasTipoSuscripcion")]
+        public ClsModResponse CuotasTipoSuscripcion([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosCuotas objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosCuotas>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            ClsModResidencias lstUsuarios = new ClsNegResidencias(null).CuotasTipoSuscripcion(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("ObtenerTAGSxResidencia")]
+        public ClsModResponse ObtenerTAGSxResidencia([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosResidencias objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosResidencias>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            List<ClsModResidencias> lstUsuarios = new ClsNegResidencias(null).ObtenerTAGSxResidencia(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("ObtenerTAGS")]
+        public ClsModResponse ObtenerTAGS([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosResidencias objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosResidencias>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            List<ClsModResidencias> lstUsuarios = new ClsNegResidencias(null).ObtenerTAGS(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+        
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("CrearTAGS")]
+        public ClsModResponse CrearTAGS([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosResidencias objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosResidencias>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            ClsModResidencias objResidencia = new ClsNegResidencias(null).CrearTAGS(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(objResidencia, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("ObtenerCuotasTipo")]
+        public ClsModResponse ObtenerCuotasTipo([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosResidencias objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosResidencias>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            List<ClsModResidencias> lstUsuarios = new ClsNegResidencias(null).ObtenerCuotasTipo(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
 
     }
 }

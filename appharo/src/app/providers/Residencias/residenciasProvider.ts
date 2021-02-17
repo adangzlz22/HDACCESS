@@ -287,4 +287,156 @@ export class ResidenciasProvider {
     });
     return usuario;
     }
+
+    ObtenerTAGS(IDDepartamento) {
+      let usuario = new Promise((resolve,reject) => {
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+  
+      let url = this.url_principal + "ObtenerTAGS";
+   
+      let Model = {
+        IDDepartamento: IDDepartamento
+      };
+      let Peticion = {
+        Model: JSON.stringify(Model),
+        TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+        Formato: 2
+      };
+      this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(
+        val => {
+         // console.log(val);
+          if (val != undefined) {
+            resolve(val);
+          }
+        },
+        Error => {
+          console.log("POST call in error", Error);
+          if (Error != undefined) {
+            reject(Error);
+          }
+        }
+      );
+    });
+    return usuario;
+    }
+    
+    CrearTAGS(PKUsuario,person_pin,nombre) {
+      let usuario = new Promise((resolve,reject) => {
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+  
+      let url = this.url_principal + "CrearTAGS";
+   
+      let Model = {
+        PKUsuario: PKUsuario,
+        person_pin:person_pin,
+        nombre:nombre
+      };
+      let Peticion = {
+        Model: JSON.stringify(Model),
+        TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+        Formato: 2
+      };
+      this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(
+        val => {
+         // console.log(val);
+          if (val != undefined) {
+            resolve(val);
+          }
+        },
+        Error => {
+          console.log("POST call in error", Error);
+          if (Error != undefined) {
+            reject(Error);
+          }
+        }
+      );
+    });
+    return usuario;
+    }
+    
+    ObtenerCuotasTipo(PKResidencia) {
+      let usuario = new Promise((resolve,reject) => {
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+  
+      let url = this.url_principal + "ObtenerCuotasTipo";
+   
+      let Model = {
+        PKResidencia: PKResidencia,
+      };
+      let Peticion = {
+        Model: JSON.stringify(Model),
+        TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+        Formato: 2
+      };
+      this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(
+        val => {
+         // console.log(val);
+          if (val != undefined) {
+            resolve(val);
+          }
+        },
+        Error => {
+          console.log("POST call in error", Error);
+          if (Error != undefined) {
+            reject(Error);
+          }
+        }
+      );
+    });
+    return usuario;
+    }
+
+        
+    Actualizar(IdCatTipoSuscripcion,Costo) {
+      let usuario = new Promise((resolve,reject) => {
+  
+      const httpOptions = {
+        headers: new HttpHeaders({
+          "Content-type": "application/json"
+        })
+      };
+  
+      let url = this.url_principal + "CuotasTipoSuscripcion";
+   
+      let Model = {
+        IdCatTipoSuscripcion: IdCatTipoSuscripcion,
+        Costo: Costo
+      };
+      let Peticion = {
+        Model: JSON.stringify(Model),
+        TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+        Formato: 2
+      };
+      this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(
+        val => {
+         // console.log(val);
+          if (val != undefined) {
+            resolve(val);
+          }
+        },
+        Error => {
+          console.log("POST call in error", Error);
+          if (Error != undefined) {
+            reject(Error);
+          }
+        }
+      );
+    });
+    return usuario;
+    }
 }

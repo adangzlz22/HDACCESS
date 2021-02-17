@@ -30,7 +30,7 @@ namespace ClsModHarodoor.Usuarios
         public string KeyMercado { get; set; }
         public string IDNivelDispotivo { get; set; }
         public int Expiracion { get;set;}
-
+        public string IDDepartamento { get; set; }
         public object Id { get; set; }
         public Guid IdDev { get; set; }
 

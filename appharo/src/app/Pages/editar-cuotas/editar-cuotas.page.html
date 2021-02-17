@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="color">
+      <ion-title color="light">Editar Cuotas</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button style=" color : #fff " defaultHref="page-cliente-dashboard"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-icon style=" color : #FF8225 " name="person" slot="start"></ion-icon>
+    <ion-input type="text" [(ngModel)]="TipoSuscripcion" placeholder="Tipo Suscripcion"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-icon style=" color : #FF8225 " name="person" slot="start"></ion-icon>
+  <ion-input type="text" [(ngModel)]="Costo" placeholder="Costo"></ion-input>
+</ion-item>
+
+  <ion-button color="success" expand="block" shape="round" fill="outline" (click)="Actualizar()">Aceptar</ion-button>
+  
+</ion-content>

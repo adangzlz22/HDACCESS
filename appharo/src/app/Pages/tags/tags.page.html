@@ -30,12 +30,12 @@
             <!-- <ion-note slot="end">TOTAL: ${{pago.total}}</ion-note> -->
         <!-- </ion-item> -->
     </ion-label>
-    <ion-button color="secondary" expand="block" shape="round" fill="outline" (click)="buscarResidente()"> 
-        <span *ngIf="userName == 'No seleccionado'">Seleccionar</span> 
-        <span *ngIf="userName != 'No seleccionado'">Cambiar</span>
+    <ion-button color="secondary" expand="block" shape="round" fill="outline" (click)="BuscarTAGS()"> 
+        <span *ngIf="tags == 'No seleccionado'">Seleccionar</span> 
+        <span *ngIf="tags != 'No seleccionado'">Cambiar</span>
     </ion-button>
 </ion-item>
 
-      <ion-button color="success" expand="block" shape="round" fill="outline" (click)="pagar()">Aceptar</ion-button>
+      <ion-button color="success" expand="block" shape="round" fill="outline" (click)="AsignarTAGS()">Aceptar</ion-button>
   </div>
 </ion-content>

@@ -89,6 +89,7 @@ texto:any;
           this._login.KeyMercado = this.DatosUsuarios[0]['KeyMercado'];
           this._login.IDNivelDispotivo = this.DatosUsuarios[0]['IDNivelDispotivo'];
           this._login.Expiracion = this.DatosUsuarios[0]['Expiracion'];
+          this._login.IDDepartamento = this.DatosUsuarios[0]['IDDepartamento'];
           
           
 

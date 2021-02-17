@@ -26,6 +26,7 @@ export class  UsuarioProvider {
     
     IDNivelDispotivo:any;
     Expiracion:any;
+    IDDepartamento:any;
 
     constructor(
       public http: HttpClient,

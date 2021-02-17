@@ -31,6 +31,7 @@ import { PagoMPComponent } from './Pages/pago-mp/pago-mp.component';
 import { GeneradorProvider } from './providers/GeneradorCodigosDeBarra/GeneradorProvider';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { IonicStorageModule } from '@ionic/storage';
+import { BuscadorTAGSComponent } from './Pages/buscar-tags/buscar-tags.page';
 
 @NgModule({
   declarations: [AppComponent
@@ -38,6 +39,7 @@ import { IonicStorageModule } from '@ionic/storage';
                 ,BuscadorResidenteComponent
                 ,EstadoCuentaComponent
                 ,ReportesComponent
+                ,BuscadorTAGSComponent
                 , PagoMPComponent],
   entryComponents: [],
   imports: [BrowserModule

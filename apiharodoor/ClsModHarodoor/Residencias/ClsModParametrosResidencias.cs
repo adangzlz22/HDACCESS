@@ -23,14 +23,18 @@ namespace ClsModHarodoor.Residencias
         public ClsDispositivo Dispositivo { get; set; }
         public ClsDepartamento Departamento { get; set; }
 
-        public string KeyMercado {get;set;}
-        public string TokenMercado {get;set;}
+        public string KeyMercado { get; set; }
+        public string TokenMercado { get; set; }
         public string IdNivelDispositivo { get; set; }
         public string FechaExpiracion { get; set; }
 
         public string id { get; set; }
         public string nombreDepartamento { get; set; }
 
+        public string IDDepartamento { get; set; }
 
+        public int PKUsuario { get; set; }
+        public string person_pin { get; set; }
+        public string nombre { get; set; }
     }
 }

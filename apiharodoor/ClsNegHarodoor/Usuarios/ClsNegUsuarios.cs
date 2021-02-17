@@ -283,6 +283,37 @@ public List<ClsModUsuarios> EliminarDispositivo(ClsModParametrosUsuarios objMode
             return lstUsuarios;
         }
 
+        public ClsModUsuarios CrearTAGS(ClsModParametrosTAGS objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModUsuarios objUsuario = new ClsModUsuarios();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            objUsuario = new ClsDatUsuarios().CrearTAGS(Con, objModel, out objClsModResultado);
+
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return objUsuario;
+        }
 
 
     }

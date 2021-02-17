@@ -5,6 +5,7 @@ import { EstadoCuentaComponent } from './Pages/estado-cuenta/estado-cuenta.compo
 import { BuscadorResidenteComponent } from './Shared/Residentes/buscador-residente/buscador-residente.component';
 import { ReportesComponent } from './Pages/reportes/reportes.component';
 import { PagoMPComponent } from './Pages/pago-mp/pago-mp.component';
+import { BuscadorTAGSComponent } from './Pages/buscar-tags/buscar-tags.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'page-login', pathMatch: 'full' },
@@ -148,10 +149,24 @@ const routes: Routes = [
   {
     path: 'detallesbuzondequejaadministrador/:PKBuzonDeQueja/:NombreCompleto/:Telefono/:Tipo/:DescripcionArea/:DescripcionEstatus/:Estatus',
     loadChildren: () => import('./pages/detallesbuzondequejaadministrador/detallesbuzondequejaadministrador.module').then( m => m.DetallesbuzondequejaadministradorPageModule)
-  },  {
+  },
+  {
     path: 'tags',
     loadChildren: () => import('./Pages/tags/tags.module').then( m => m.TagsPageModule)
   },
+  {
+    path: 'cuotas',
+    loadChildren: () => import('./pages/cuotas/cuotas.module').then( m => m.CuotasPageModule)
+  },
+  {
+    path: 'editar-cuotas/:IdCatTipoSuscripcion/:TipoSuscripcion/:Costo',
+    loadChildren: () => import('./pages/editar-cuotas/editar-cuotas.module').then( m => m.EditarCuotasPageModule)
+  },
+  {
+    path: 'buscarTAGS',
+    component: BuscadorTAGSComponent
+  },
+
 
 
 

@@ -129,5 +129,25 @@ namespace ApiHarodoor.Controllers
 
             return objModResponse;
         }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ActionName("CrearTAGS")]
+        public ClsModResponse CrearTAGS([FromBody] ClsModRequest objModRequest)
+        {
+            ClsModParametrosTAGS objModUsuario = ClsObjectTransformation.Deserialize<ClsModParametrosTAGS>(objModRequest.Model, objModRequest.Formato);
+            ClsModResponse objModResponse = new ClsModResponse();
+            ClsModResultado objModResultado = null;
+
+            ClsModUsuarios lstUsuarios = new ClsNegUsuarios(null).CrearTAGS(objModUsuario, out objModResultado);
+            objModResponse.Model = ClsObjectTransformation.SerializeObjectToString<object>(lstUsuarios, objModRequest.Formato);
+
+            objModResponse.ObjModResultado = objModResultado;
+
+            return objModResponse;
+        }
+
+
     }
 }

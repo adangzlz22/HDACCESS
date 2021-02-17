@@ -454,7 +454,206 @@ namespace ClsDatHarodoor.Residencias
             return lstUsuarios;
         }
 
+        public ClsModResidencias CuotasTipoSuscripcion(SqlConnection Con, ClsModParametrosCuotas objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModResidencias objResidencia = new ClsModResidencias();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+
+            arrPar.Add(new SqlParameter("@id", SqlDbType.Int) { Value = objModel.IdCatTipoSuscripcion });
+            arrPar.Add(new SqlParameter("@costo", SqlDbType.VarChar) { Value = objModel.costo });
 
 
+            try
+            {
+                object Id = SqlHelper.ExecuteScalar(Con, CommandType.StoredProcedure, "SPActualizarCuotas", arrPar.ToArray());
+                if (Id != null)
+                {
+                    int Ident = 0;
+                    int.TryParse(Id.ToString(), out Ident);
+                    objResidencia.PKResidencia = Ident;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return objResidencia;
+        }
+
+
+        public List<ClsModResidencias> ObtenerTAGSxResidencia(SqlConnection Con, ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+            arrPar.Add(new SqlParameter("@FKResidencia", SqlDbType.Int) { Value = objModel.PKResidencia });
+
+
+            ClsModResidencias objModResidencia = new ClsModResidencias();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "SPObtenerTAGSxResidencia", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModResidencia = new ClsModResidencias();
+
+                        objModResidencia.PKUsuarioTAG = (int)(sqlLeer["PKUsuarioTAG"] != DBNull.Value ? sqlLeer["PKUsuarioTAG"] : 0);
+                        objModResidencia.PKUsuario = (int)(sqlLeer["PKUsuario"] != DBNull.Value ? sqlLeer["PKUsuario"] : 0);
+                        objModResidencia.NombreCompleto = (string)(sqlLeer["NombreCompleto"] != DBNull.Value ? sqlLeer["NombreCompleto"] : string.Empty);
+
+
+                        lstUsuarios.Add(objModResidencia);
+                    }
+                }
+                else
+                {
+                    objModResidencia = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return lstUsuarios;
+        }
+
+        public List<ClsModResidencias> ObtenerTAGS(SqlConnection Con, ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+            arrPar.Add(new SqlParameter("@DEPARTAMENTO", SqlDbType.VarChar) { Value = objModel.IDDepartamento });
+
+
+            ClsModResidencias objModResidencia = new ClsModResidencias();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "SPObtenerTAGS", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModResidencia = new ClsModResidencias();
+
+                        objModResidencia.IDPERSON = (string)(sqlLeer["IDPERSON"] != DBNull.Value ? sqlLeer["IDPERSON"] : string.Empty);
+                        objModResidencia.CARDID = (string)(sqlLeer["CARDID"] != DBNull.Value ? sqlLeer["CARDID"] : string.Empty);
+                        objModResidencia.card_no = (string)(sqlLeer["card_no"] != DBNull.Value ? sqlLeer["card_no"] : string.Empty);
+                        objModResidencia.name = (string)(sqlLeer["name"] != DBNull.Value ? sqlLeer["name"] : string.Empty);
+                        objModResidencia.last_name = (string)(sqlLeer["last_name"] != DBNull.Value ? sqlLeer["last_name"] : string.Empty);
+                        objModResidencia.name_spell = (string)(sqlLeer["name_spell"] != DBNull.Value ? sqlLeer["name_spell"] : string.Empty);
+
+                        lstUsuarios.Add(objModResidencia);
+                    }
+                }
+                else
+                {
+                    objModResidencia = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return lstUsuarios;
+        }
+
+        public ClsModResidencias CrearTAGS(SqlConnection Con, ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModResidencias objUsuario = new ClsModResidencias();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+            arrPar.Add(new SqlParameter("@PKUsuario", SqlDbType.Int) { Value = objModel.PKUsuario });
+            arrPar.Add(new SqlParameter("@person_pin", SqlDbType.VarChar) { Value = objModel.person_pin });
+            arrPar.Add(new SqlParameter("@nombre", SqlDbType.VarChar) { Value = objModel.nombre });
+
+
+            ClsModResidencias objModResidencia = new ClsModResidencias();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "SPCrearTAGS", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModResidencia = new ClsModResidencias();
+                    }
+                }
+                else
+                {
+                    objModResidencia = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return objUsuario;
+        }
+
+        public List<ClsModResidencias> ObtenerCuotasTipo(SqlConnection Con, ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            SqlDataReader sqlLeer = null;
+            List<SqlParameter> arrPar = new List<SqlParameter>();
+            arrPar.Add(new SqlParameter("@PKResidencia", SqlDbType.VarChar) { Value = objModel.PKResidencia });
+
+
+            ClsModResidencias objModResidencia = new ClsModResidencias();
+            try
+            {
+                sqlLeer = SqlHelper.ExecuteReader(Con, CommandType.StoredProcedure, "SPObtenerTiposSuscripciones", arrPar.ToArray());
+                if (sqlLeer.HasRows)
+                {
+                    while (sqlLeer.Read())
+                    {
+                        objModResidencia = new ClsModResidencias();
+
+                        objModResidencia.IdCatTipoSuscripcion = (int)(sqlLeer["IdCatTipoSuscripcion"] != DBNull.Value ? sqlLeer["IdCatTipoSuscripcion"] : 0);
+                        objModResidencia.PKResidencia = (int)(sqlLeer["PKResidencia"] != DBNull.Value ? sqlLeer["PKResidencia"] :0);
+                        objModResidencia.TipoSuscripcion = (string)(sqlLeer["TipoSuscripcion"] != DBNull.Value ? sqlLeer["TipoSuscripcion"] : string.Empty);
+                        objModResidencia.Costo = (int)(sqlLeer["Costo"] != DBNull.Value ? sqlLeer["Costo"] : 0);
+
+                        lstUsuarios.Add(objModResidencia);
+                    }
+                }
+                else
+                {
+                    objModResidencia = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                objClsModResultado.MsgError = Error + "CargarXID(): " + ex.Message;
+            }
+            finally
+            {
+                if (sqlLeer != null) sqlLeer.Close();
+            }
+            return lstUsuarios;
+        }
     }
 }

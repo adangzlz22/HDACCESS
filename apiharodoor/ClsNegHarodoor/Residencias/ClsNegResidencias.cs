@@ -236,15 +236,15 @@ namespace ClsNegHarodoor.Residencias
                             ClsModParametrosResidencias objParametroResidencia = new ClsModParametrosResidencias();
                             objParametroResidencia.NombreResidencia = "";
 
-                            List<ClsModResidencias> lstResidencias = new ClsDatResidencias().ObtenerResidencias(Con,objParametroResidencia,out objClsModResultado);
+                            List<ClsModResidencias> lstResidencias = new ClsDatResidencias().ObtenerResidencias(Con, objParametroResidencia, out objClsModResultado);
                             foreach (var item in lstResidencias)
                             {
                                 if (item.FechaExpiracion == DateTime.Now)
                                 {
-                                    lstPeticion = new ClsDatResidencias().FechaExpiracion(Con, item.PKResidencia ,out objClsModResultado);
+                                    lstPeticion = new ClsDatResidencias().FechaExpiracion(Con, item.PKResidencia, out objClsModResultado);
                                 }
                             }
-                            
+
 
                             Con.Close();
                         }
@@ -276,6 +276,169 @@ namespace ClsNegHarodoor.Residencias
                         {
                             Con.Open();
                             lstUsuarios = new ClsDatResidencias().ObtenerDepartamento(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return lstUsuarios;
+        }
+
+
+        public ClsModResidencias CuotasTipoSuscripcion(ClsModParametrosCuotas objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModResidencias objUsuario = new ClsModResidencias();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            objUsuario = new ClsDatResidencias().CuotasTipoSuscripcion(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return objUsuario;
+        }
+
+
+        public List<ClsModResidencias> ObtenerTAGSxResidencia(ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            ClsModResidencias objUsuario = new ClsModResidencias();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            lstUsuarios = new ClsDatResidencias().ObtenerTAGSxResidencia(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return lstUsuarios;
+        }
+
+
+        public List<ClsModResidencias> ObtenerTAGS(ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            ClsModResidencias objUsuario = new ClsModResidencias();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            lstUsuarios = new ClsDatResidencias().ObtenerTAGS(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return lstUsuarios;
+        }
+
+
+
+        public ClsModResidencias CrearTAGS(ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            ClsModResidencias objResidencia = new ClsModResidencias();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            objResidencia = new ClsDatResidencias().CrearTAGS(Con, objModel, out objClsModResultado);
+                            Con.Close();
+                            Con.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        objClsModResultado.MsgError = ex.Message;
+                    }
+                    break;
+                case TipoConexion.WCF:
+
+                    break;
+            }
+            return objResidencia;
+        }
+
+        public List<ClsModResidencias> ObtenerCuotasTipo(ClsModParametrosResidencias objModel, out ClsModResultado objClsModResultado)
+        {
+            objClsModResultado = new ClsModResultado();
+            List<ClsModResidencias> lstUsuarios = new List<ClsModResidencias>();
+            ClsModResidencias objUsuario = new ClsModResidencias();
+
+
+            switch (ClsReadSettings.GetTipoConexion())
+            {
+                case TipoConexion.Local:
+                    try
+                    {
+                        using (Con)
+                        {
+                            Con.Open();
+                            lstUsuarios = new ClsDatResidencias().ObtenerCuotasTipo(Con, objModel, out objClsModResultado);
                             Con.Close();
                             Con.Dispose();
                         }
