@@ -12,3 +12,17 @@ C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsDatPago\obj\Release\ne
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.csproj.CopyComplete
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.dll
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbDatPago.deps.json
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbDatPago.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbDatPago.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbModPago.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbUtileria.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbModPago.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\bin\Release\netcoreapp3.1\ClbUtileria.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.csprojAssemblyReference.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.AssemblyInfoInputs.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.AssemblyInfo.cs
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.csproj.CoreCompileInputs.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.csproj.CopyComplete
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\ClsDatPago\obj\Release\netcoreapp3.1\ClbDatPago.pdb

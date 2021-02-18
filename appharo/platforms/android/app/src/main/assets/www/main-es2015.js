@@ -434,6 +434,17 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/Pages/buscar-tags/buscar-tags.page.html":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/Pages/buscar-tags/buscar-tags.page.html ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ion-header>\n  <ion-toolbar class=\"color\">\n    <ion-title color=\"light\">Buscar TAGS</ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-back-button style = \" color : #fff \"  defaultHref=\"page-cliente-dashboard\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n   \n    <ion-item>\n      <ion-searchbar></ion-searchbar>\n    </ion-item>\n   \n    <ion-item *ngFor=\"let item of lstTAGSv\" >\n      <ion-avatar slot=\"start\">\n        <img src=\"../assets/img/user.png\">\n      </ion-avatar>\n      <ion-label (click)=\"retonarTAG(item)\"> \n        <h2>{{item.name}}</h2>\n      </ion-label>\n    </ion-item>\n    \n  </ion-list>\n\n</ion-content>"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/Pages/estado-cuenta/estado-cuenta.component.html":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/Pages/estado-cuenta/estado-cuenta.component.html ***!
@@ -526,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ConfigProvider = class ConfigProvider {
+    // ApiPagos = 'https://localhost:44318/Api/';
     constructor() {
         this.APIURL = 'http://apiharodoor.harodoor.eu/Api/';
         // APIURL ='http://localhost:50739/Api/';
@@ -543,6 +555,99 @@ ConfigProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/Pages/buscar-tags/buscar-tags.page.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/Pages/buscar-tags/buscar-tags.page.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvYnVzY2FyLXRhZ3MvQzpcXFVzZXJzXFxBZGFuR29uemFsZXpcXERlc2t0b3BcXG51ZXZvXFxIREFDQ0VTU1xcYXBwaGFyby9zcmNcXGFwcFxcUGFnZXNcXGJ1c2Nhci10YWdzXFxidXNjYXItdGFncy5wYWdlLnNjc3MiLCJzcmMvYXBwL1BhZ2VzL2J1c2Nhci10YWdzL2J1c2Nhci10YWdzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLCtCQUFBO0FDQUo7O0FER0E7RUFDSSxzQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvUGFnZXMvYnVzY2FyLXRhZ3MvYnVzY2FyLXRhZ3MucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcclxufVxyXG5cclxuLnBhZGRpbmcge1xyXG4gICAgcGFkZGluZzogNSUhaW1wb3J0YW50O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/Pages/buscar-tags/buscar-tags.page.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/Pages/buscar-tags/buscar-tags.page.ts ***!
+  \*******************************************************/
+/*! exports provided: BuscadorTAGSComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuscadorTAGSComponent", function() { return BuscadorTAGSComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var src_app_providers_Residencias_residenciasProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/providers/Residencias/residenciasProvider */ "./src/app/providers/Residencias/residenciasProvider.ts");
+/* harmony import */ var src_app_providers_usuarios_usuariosProviders__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/providers/usuarios/usuariosProviders */ "./src/app/providers/usuarios/usuariosProviders.ts");
+
+
+
+
+
+
+let BuscadorTAGSComponent = class BuscadorTAGSComponent {
+    constructor(navCtrl, _usuProv, _resi, route) {
+        this.navCtrl = navCtrl;
+        this._usuProv = _usuProv;
+        this._resi = _resi;
+        this.route = route;
+        this.lstTAGSv = [];
+    }
+    ngOnInit() {
+        this.route.queryParams.subscribe(params => {
+            this.pago = JSON.parse(params['pago']);
+        });
+        console.log(this._usuProv.IDDepartamento);
+        this.BuscarTags();
+    }
+    BuscarTags() {
+        this._resi.ObtenerTAGS(this._usuProv.IDDepartamento).then((result) => {
+            this.lstTAGSv = JSON.parse(result.Model);
+            console.log(this.lstTAGSv[0].name);
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+    retonarTAG(item) {
+        console.log(item);
+        this.pago.PersonID = item.IDPERSON;
+        const variableNav = this.pago.origen;
+        console.log(this.pago);
+        console.log(variableNav);
+        if (variableNav == 'tags') {
+            this.navCtrl.navigateRoot(variableNav, {
+                queryParams: {
+                    pago: JSON.stringify(this.pago),
+                }
+            });
+        }
+    }
+};
+BuscadorTAGSComponent.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
+    { type: src_app_providers_usuarios_usuariosProviders__WEBPACK_IMPORTED_MODULE_5__["UsuarioProvider"] },
+    { type: src_app_providers_Residencias_residenciasProvider__WEBPACK_IMPORTED_MODULE_4__["ResidenciasProvider"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+];
+BuscadorTAGSComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-buscar-tags',
+        template: __webpack_require__(/*! raw-loader!./buscar-tags.page.html */ "./node_modules/raw-loader/index.js!./src/app/Pages/buscar-tags/buscar-tags.page.html"),
+        styles: [__webpack_require__(/*! ./buscar-tags.page.scss */ "./src/app/Pages/buscar-tags/buscar-tags.page.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"],
+        src_app_providers_usuarios_usuariosProviders__WEBPACK_IMPORTED_MODULE_5__["UsuarioProvider"],
+        src_app_providers_Residencias_residenciasProvider__WEBPACK_IMPORTED_MODULE_4__["ResidenciasProvider"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+], BuscadorTAGSComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/Pages/estado-cuenta/estado-cuenta.component.scss":
 /*!******************************************************************!*\
   !*** ./src/app/Pages/estado-cuenta/estado-cuenta.component.scss ***!
@@ -550,7 +655,7 @@ ConfigProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvZXN0YWRvLWN1ZW50YS9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcQXBwSGFyby9zcmNcXGFwcFxcUGFnZXNcXGVzdGFkby1jdWVudGFcXGVzdGFkby1jdWVudGEuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL1BhZ2VzL2VzdGFkby1jdWVudGEvZXN0YWRvLWN1ZW50YS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLCtCQUFBO0FDQUo7O0FER0E7RUFDSSxzQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvUGFnZXMvZXN0YWRvLWN1ZW50YS9lc3RhZG8tY3VlbnRhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcclxufVxyXG5cclxuLnBhZGRpbmcge1xyXG4gICAgcGFkZGluZzogNSUhaW1wb3J0YW50O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvZXN0YWRvLWN1ZW50YS9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcbnVldm9cXEhEQUNDRVNTXFxhcHBoYXJvL3NyY1xcYXBwXFxQYWdlc1xcZXN0YWRvLWN1ZW50YVxcZXN0YWRvLWN1ZW50YS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvUGFnZXMvZXN0YWRvLWN1ZW50YS9lc3RhZG8tY3VlbnRhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksK0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9QYWdlcy9lc3RhZG8tY3VlbnRhL2VzdGFkby1jdWVudGEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3Ige1xyXG4gICAgLy8tLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiBsaW5lYXItZ3JhZGllbnQoI2ZmYjYxOCwgI2ViMWUwOCk7XHJcbiAgICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xyXG59XHJcblxyXG4ucGFkZGluZyB7XHJcbiAgICBwYWRkaW5nOiA1JSFpbXBvcnRhbnQ7XHJcbn0iLCIuY29sb3Ige1xuICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xufVxuXG4ucGFkZGluZyB7XG4gIHBhZGRpbmc6IDUlICFpbXBvcnRhbnQ7XG59Il19 */"
 
 /***/ }),
 
@@ -674,7 +779,7 @@ EstadoCuentaComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcGFnby1tcC9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcQXBwSGFyby9zcmNcXGFwcFxcUGFnZXNcXHBhZ28tbXBcXHBhZ28tbXAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL1BhZ2VzL3BhZ28tbXAvcGFnby1tcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLCtCQUFBO0FDQUo7O0FER0E7RUFDSSxzQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvUGFnZXMvcGFnby1tcC9wYWdvLW1wLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcclxufVxyXG5cclxuLnBhZGRpbmcge1xyXG4gICAgcGFkZGluZzogNSUhaW1wb3J0YW50O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcGFnby1tcC9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcbnVldm9cXEhEQUNDRVNTXFxhcHBoYXJvL3NyY1xcYXBwXFxQYWdlc1xccGFnby1tcFxccGFnby1tcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvUGFnZXMvcGFnby1tcC9wYWdvLW1wLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksK0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9QYWdlcy9wYWdvLW1wL3BhZ28tbXAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3Ige1xyXG4gICAgLy8tLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiBsaW5lYXItZ3JhZGllbnQoI2ZmYjYxOCwgI2ViMWUwOCk7XHJcbiAgICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xyXG59XHJcblxyXG4ucGFkZGluZyB7XHJcbiAgICBwYWRkaW5nOiA1JSFpbXBvcnRhbnQ7XHJcbn0iLCIuY29sb3Ige1xuICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xufVxuXG4ucGFkZGluZyB7XG4gIHBhZGRpbmc6IDUlICFpbXBvcnRhbnQ7XG59Il19 */"
 
 /***/ }),
 
@@ -737,7 +842,7 @@ let PagoMPComponent = class PagoMPComponent {
         console.log(this.key);
         Mercadopago.setPublishableKey(this.key);
         console.log(Mercadopago);
-        this.obtenesTipos();
+        // this.obtenesTipos();
         this.emailClientes = this.usuario.Correo;
         // Mercadopago.getIdentificationTypes(test);
         // function test(a, b) {
@@ -1002,21 +1107,23 @@ let PagoMPComponent = class PagoMPComponent {
             yield alert.present();
         });
     }
-    obtenesTipos() {
-        this.suscripciones.cargarTipos().subscribe((response) => {
-            // console.log(val);
-            if (response.mensajeError) {
-                console.warn(response.mensajeError);
-            }
-            console.log(response);
-            this.tiposSuscripciones = response.resultado;
-        }, Error => {
-            console.log('POST call in Agregar', Error);
-            if (Error != undefined) {
-                console.warn(Error);
-            }
-        });
-    }
+    // obtenesTipos() {
+    //   this.suscripciones.cargarTipos(this.FKResidencia).subscribe(
+    //     (response: any) => {
+    //      // console.log(val);
+    //       if (response.mensajeError) {
+    //         console.warn(response.mensajeError);
+    //       }
+    //       console.log(response);
+    //       this.tiposSuscripciones = response.resultado;
+    //     },
+    //     Error => {
+    //       console.log('POST call in Agregar', Error);
+    //       if (Error != undefined) {
+    //           console.warn(Error);
+    //       }
+    //     });
+    // }
     setTotal(e) {
         this.tiposeleccionado = e.target.value;
         this.pago.IdCatTipoSuscripcion = e.target.value.idCatTipoSuscripcion;
@@ -1060,7 +1167,7 @@ PagoMPComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcGFnb3MtZWZlY3Rpdm8vQzpcXFVzZXJzXFxBZGFuR29uemFsZXpcXERlc2t0b3BcXEFwcEhhcm8vc3JjXFxhcHBcXFBhZ2VzXFxwYWdvcy1lZmVjdGl2b1xccGFnb3MtZWZlY3Rpdm8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL1BhZ2VzL3BhZ29zLWVmZWN0aXZvL3BhZ29zLWVmZWN0aXZvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksK0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9QYWdlcy9wYWdvcy1lZmVjdGl2by9wYWdvcy1lZmVjdGl2by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvciB7XHJcbiAgICAvLy0taW9uLWJhY2tncm91bmQtY29sb3I6IGxpbmVhci1ncmFkaWVudCgjZmZiNjE4LCAjZWIxZTA4KTtcclxuICAgIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjU7XHJcbn1cclxuXHJcbi5wYWRkaW5nIHtcclxuICAgIHBhZGRpbmc6IDUlIWltcG9ydGFudDtcclxufSIsIi5jb2xvciB7XG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjU7XG59XG5cbi5wYWRkaW5nIHtcbiAgcGFkZGluZzogNSUgIWltcG9ydGFudDtcbn0iXX0= */"
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcGFnb3MtZWZlY3Rpdm8vQzpcXFVzZXJzXFxBZGFuR29uemFsZXpcXERlc2t0b3BcXG51ZXZvXFxIREFDQ0VTU1xcYXBwaGFyby9zcmNcXGFwcFxcUGFnZXNcXHBhZ29zLWVmZWN0aXZvXFxwYWdvcy1lZmVjdGl2by5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvUGFnZXMvcGFnb3MtZWZlY3Rpdm8vcGFnb3MtZWZlY3Rpdm8uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSwrQkFBQTtBQ0FKOztBREdBO0VBQ0ksc0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL1BhZ2VzL3BhZ29zLWVmZWN0aXZvL3BhZ29zLWVmZWN0aXZvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcclxufVxyXG5cclxuLnBhZGRpbmcge1xyXG4gICAgcGFkZGluZzogNSUhaW1wb3J0YW50O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1089,7 +1196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let PagosEfectivoComponent = class PagosEfectivoComponent {
-    constructor(pagosProvider, suscripciones, navCtrl, usuario, modalCtrl, route, cdRef, alertCtrl) {
+    constructor(pagosProvider, suscripciones, navCtrl, usuario, modalCtrl, route, cdRef, alertCtrl, _usupro) {
         this.pagosProvider = pagosProvider;
         this.suscripciones = suscripciones;
         this.navCtrl = navCtrl;
@@ -1098,6 +1205,7 @@ let PagosEfectivoComponent = class PagosEfectivoComponent {
         this.route = route;
         this.cdRef = cdRef;
         this.alertCtrl = alertCtrl;
+        this._usupro = _usupro;
         this.pago = {
             total: 0,
             tipo: 0,
@@ -1112,6 +1220,8 @@ let PagosEfectivoComponent = class PagosEfectivoComponent {
         this.route.queryParams.subscribe(params => {
             if (params['pago']) {
                 const objTmp = JSON.parse(params['pago']);
+                console.log('objTmp');
+                console.log(objTmp);
                 this.pago.FKUsuario = objTmp.FKUsuario;
                 this.pago.tipo = objTmp.tipo;
                 this.pago.total = objTmp.total;
@@ -1120,10 +1230,12 @@ let PagosEfectivoComponent = class PagosEfectivoComponent {
                 this.userName = nameUser[0];
             }
         });
-        this.obtenesTipos();
+        this.PKResidencia = this._usupro.FKResidencia;
+        console.log(this.PKResidencia);
+        this.obtenesTipos(this.PKResidencia);
     }
-    obtenesTipos() {
-        this.suscripciones.cargarTipos().subscribe((response) => {
+    obtenesTipos(PKResidencia) {
+        this.suscripciones.cargarTipos(PKResidencia).subscribe((response) => {
             // console.log(val);
             if (response.mensajeError) {
                 console.warn(response.mensajeError);
@@ -1221,7 +1333,8 @@ PagosEfectivoComponent.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ModalController"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"] },
+    { type: src_app_providers_usuarios_usuariosProviders__WEBPACK_IMPORTED_MODULE_4__["UsuarioProvider"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('tipoSeleccionado', { static: true }),
@@ -1239,7 +1352,8 @@ PagosEfectivoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ModalController"],
         _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"],
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]])
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"],
+        src_app_providers_usuarios_usuariosProviders__WEBPACK_IMPORTED_MODULE_4__["UsuarioProvider"]])
 ], PagosEfectivoComponent);
 
 
@@ -1253,7 +1367,7 @@ PagosEfectivoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcmVwb3J0ZXMvQzpcXFVzZXJzXFxBZGFuR29uemFsZXpcXERlc2t0b3BcXEFwcEhhcm8vc3JjXFxhcHBcXFBhZ2VzXFxyZXBvcnRlc1xccmVwb3J0ZXMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL1BhZ2VzL3JlcG9ydGVzL3JlcG9ydGVzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksK0JBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9QYWdlcy9yZXBvcnRlcy9yZXBvcnRlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvciB7XHJcbiAgICAvLy0taW9uLWJhY2tncm91bmQtY29sb3I6IGxpbmVhci1ncmFkaWVudCgjZmZiNjE4LCAjZWIxZTA4KTtcclxuICAgIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjU7XHJcbn1cclxuXHJcbi5wYWRkaW5nIHtcclxuICAgIHBhZGRpbmc6IDUlIWltcG9ydGFudDtcclxufSIsIi5jb2xvciB7XG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjU7XG59XG5cbi5wYWRkaW5nIHtcbiAgcGFkZGluZzogNSUgIWltcG9ydGFudDtcbn0iXX0= */"
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvUGFnZXMvcmVwb3J0ZXMvQzpcXFVzZXJzXFxBZGFuR29uemFsZXpcXERlc2t0b3BcXG51ZXZvXFxIREFDQ0VTU1xcYXBwaGFyby9zcmNcXGFwcFxcUGFnZXNcXHJlcG9ydGVzXFxyZXBvcnRlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvUGFnZXMvcmVwb3J0ZXMvcmVwb3J0ZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSwrQkFBQTtBQ0FKOztBREdBO0VBQ0ksc0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL1BhZ2VzL3JlcG9ydGVzL3JlcG9ydGVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcclxufVxyXG5cclxuLnBhZGRpbmcge1xyXG4gICAgcGFkZGluZzogNSUhaW1wb3J0YW50O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1392,7 +1506,7 @@ ReportesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvU2hhcmVkL1Jlc2lkZW50ZXMvYnVzY2Fkb3ItcmVzaWRlbnRlL0M6XFxVc2Vyc1xcQWRhbkdvbnphbGV6XFxEZXNrdG9wXFxBcHBIYXJvL3NyY1xcYXBwXFxTaGFyZWRcXFJlc2lkZW50ZXNcXGJ1c2NhZG9yLXJlc2lkZW50ZVxcYnVzY2Fkb3ItcmVzaWRlbnRlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9TaGFyZWQvUmVzaWRlbnRlcy9idXNjYWRvci1yZXNpZGVudGUvYnVzY2Fkb3ItcmVzaWRlbnRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksK0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL1NoYXJlZC9SZXNpZGVudGVzL2J1c2NhZG9yLXJlc2lkZW50ZS9idXNjYWRvci1yZXNpZGVudGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sb3Ige1xyXG4gICAgLy8tLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiBsaW5lYXItZ3JhZGllbnQoI2ZmYjYxOCwgI2ViMWUwOCk7XHJcbiAgICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xyXG59IiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNTtcbn0iXX0= */"
+module.exports = ".color {\n  --ion-background-color: #FF8225;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvU2hhcmVkL1Jlc2lkZW50ZXMvYnVzY2Fkb3ItcmVzaWRlbnRlL0M6XFxVc2Vyc1xcQWRhbkdvbnphbGV6XFxEZXNrdG9wXFxudWV2b1xcSERBQ0NFU1NcXGFwcGhhcm8vc3JjXFxhcHBcXFNoYXJlZFxcUmVzaWRlbnRlc1xcYnVzY2Fkb3ItcmVzaWRlbnRlXFxidXNjYWRvci1yZXNpZGVudGUuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL1NoYXJlZC9SZXNpZGVudGVzL2J1c2NhZG9yLXJlc2lkZW50ZS9idXNjYWRvci1yZXNpZGVudGUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSwrQkFBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvU2hhcmVkL1Jlc2lkZW50ZXMvYnVzY2Fkb3ItcmVzaWRlbnRlL2J1c2NhZG9yLXJlc2lkZW50ZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvciB7XHJcbiAgICAvLy0taW9uLWJhY2tncm91bmQtY29sb3I6IGxpbmVhci1ncmFkaWVudCgjZmZiNjE4LCAjZWIxZTA4KTtcclxuICAgIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjU7XHJcbn0iLCIuY29sb3Ige1xuICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1443,15 +1557,23 @@ let BuscadorResidenteComponent = class BuscadorResidenteComponent {
         this.pago.FKUsuario = item.PKUsuario;
         this.pago.userObj = item;
         const variableNav = this.pago.origen ? this.pago.origen : 'pagoEfectivo';
+        console.log(this.pago);
         console.log(variableNav);
-        if (variableNav != 'pagoEfectivo') {
+        if (variableNav == 'asignar-area-comun') {
             this.navCtrl.navigateRoot(`` + variableNav + `/${this.PKUsuario}`, {
                 queryParams: {
                     pago: JSON.stringify(this.pago),
                 }
             });
         }
-        else {
+        if (variableNav == 'tags') {
+            this.navCtrl.navigateRoot(variableNav, {
+                queryParams: {
+                    pago: JSON.stringify(this.pago),
+                }
+            });
+        }
+        if (variableNav == 'pagoEfectivo') {
             this.navCtrl.navigateRoot(variableNav, {
                 queryParams: {
                     pago: JSON.stringify(this.pago),
@@ -1498,6 +1620,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Residentes_buscador_residente_buscador_residente_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Shared/Residentes/buscador-residente/buscador-residente.component */ "./src/app/Shared/Residentes/buscador-residente/buscador-residente.component.ts");
 /* harmony import */ var _Pages_reportes_reportes_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pages/reportes/reportes.component */ "./src/app/Pages/reportes/reportes.component.ts");
 /* harmony import */ var _Pages_pago_mp_pago_mp_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Pages/pago-mp/pago-mp.component */ "./src/app/Pages/pago-mp/pago-mp.component.ts");
+/* harmony import */ var _Pages_buscar_tags_buscar_tags_page__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Pages/buscar-tags/buscar-tags.page */ "./src/app/Pages/buscar-tags/buscar-tags.page.ts");
+
 
 
 
@@ -1649,6 +1773,22 @@ const routes = [
         path: 'detallesbuzondequejaadministrador/:PKBuzonDeQueja/:NombreCompleto/:Telefono/:Tipo/:DescripcionArea/:DescripcionEstatus/:Estatus',
         loadChildren: () => __webpack_require__.e(/*! import() | pages-detallesbuzondequejaadministrador-detallesbuzondequejaadministrador-module */ "pages-detallesbuzondequejaadministrador-detallesbuzondequejaadministrador-module").then(__webpack_require__.bind(null, /*! ./pages/detallesbuzondequejaadministrador/detallesbuzondequejaadministrador.module */ "./src/app/pages/detallesbuzondequejaadministrador/detallesbuzondequejaadministrador.module.ts")).then(m => m.DetallesbuzondequejaadministradorPageModule)
     },
+    {
+        path: 'tags',
+        loadChildren: () => __webpack_require__.e(/*! import() | Pages-tags-tags-module */ "Pages-tags-tags-module").then(__webpack_require__.bind(null, /*! ./Pages/tags/tags.module */ "./src/app/Pages/tags/tags.module.ts")).then(m => m.TagsPageModule)
+    },
+    {
+        path: 'cuotas',
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-cuotas-cuotas-module */ "pages-cuotas-cuotas-module").then(__webpack_require__.bind(null, /*! ./pages/cuotas/cuotas.module */ "./src/app/pages/cuotas/cuotas.module.ts")).then(m => m.CuotasPageModule)
+    },
+    {
+        path: 'editar-cuotas/:IdCatTipoSuscripcion/:TipoSuscripcion/:Costo',
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-editar-cuotas-editar-cuotas-module */ "pages-editar-cuotas-editar-cuotas-module").then(__webpack_require__.bind(null, /*! ./pages/editar-cuotas/editar-cuotas.module */ "./src/app/pages/editar-cuotas/editar-cuotas.module.ts")).then(m => m.EditarCuotasPageModule)
+    },
+    {
+        path: 'buscarTAGS',
+        component: _Pages_buscar_tags_buscar_tags_page__WEBPACK_IMPORTED_MODULE_8__["BuscadorTAGSComponent"]
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -1771,6 +1911,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_GeneradorCodigosDeBarra_GeneradorProvider__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./providers/GeneradorCodigosDeBarra/GeneradorProvider */ "./src/app/providers/GeneradorCodigosDeBarra/GeneradorProvider.ts");
 /* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
+/* harmony import */ var _Pages_buscar_tags_buscar_tags_page__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./Pages/buscar-tags/buscar-tags.page */ "./src/app/Pages/buscar-tags/buscar-tags.page.ts");
+
 
 
 
@@ -1811,6 +1953,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _Shared_Residentes_buscador_residente_buscador_residente_component__WEBPACK_IMPORTED_MODULE_20__["BuscadorResidenteComponent"],
             _Pages_estado_cuenta_estado_cuenta_component__WEBPACK_IMPORTED_MODULE_17__["EstadoCuentaComponent"],
             _Pages_reportes_reportes_component__WEBPACK_IMPORTED_MODULE_19__["ReportesComponent"],
+            _Pages_buscar_tags_buscar_tags_page__WEBPACK_IMPORTED_MODULE_31__["BuscadorTAGSComponent"],
             _Pages_pago_mp_pago_mp_component__WEBPACK_IMPORTED_MODULE_27__["PagoMPComponent"]],
         entryComponents: [],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
@@ -2608,7 +2751,7 @@ let ResidenciasProvider = class ResidenciasProvider {
         });
         return Menu;
     }
-    CrearResidencias(NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo) {
+    CrearResidencias(NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, Departamentos) {
         let usuario = new Promise((resolve, reject) => {
             const httpOptions = {
                 headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -2622,7 +2765,8 @@ let ResidenciasProvider = class ResidenciasProvider {
                 LimVisitasUnSoloUso: LimVisitasUnSoloUso,
                 WhatsAppCorreo: WhatsappCorreo,
                 Dias: Dias,
-                Dispositivo: Dispositivo
+                Dispositivo: Dispositivo,
+                Departamento: Departamentos
             };
             let Peticion = {
                 Model: JSON.stringify(Model),
@@ -2643,7 +2787,7 @@ let ResidenciasProvider = class ResidenciasProvider {
         });
         return usuario;
     }
-    ActualizarResidencias(PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado, FechaExpiracion) {
+    ActualizarResidencias(PKResidencia, NombreResidencia, LimVisitasFrecuentes, LimVisitasUnSoloUso, WhatsappCorreo, Dias, Dispositivo, TokenMercado, KeyMercado, FechaExpiracion, Departamentos) {
         let usuario = new Promise((resolve, reject) => {
             const httpOptions = {
                 headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -2661,7 +2805,8 @@ let ResidenciasProvider = class ResidenciasProvider {
                 Dispositivo: Dispositivo,
                 TokenMercado: TokenMercado,
                 KeyMercado: KeyMercado,
-                FechaExpiracion: FechaExpiracion
+                FechaExpiracion: FechaExpiracion,
+                Departamento: Departamentos
             };
             let Peticion = {
                 Model: JSON.stringify(Model),
@@ -2740,6 +2885,34 @@ let ResidenciasProvider = class ResidenciasProvider {
         });
         return usuario;
     }
+    ObtenerDepartamento() {
+        let usuario = new Promise((resolve, reject) => {
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    "Content-type": "application/json"
+                })
+            };
+            let url = this.url_principal + "ObtenerDepartamento";
+            let Model = {};
+            let Peticion = {
+                Model: JSON.stringify(Model),
+                TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+                Formato: 2
+            };
+            this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(val => {
+                // console.log(val);
+                if (val != undefined) {
+                    resolve(val);
+                }
+            }, Error => {
+                console.log("POST call in error", Error);
+                if (Error != undefined) {
+                    reject(Error);
+                }
+            });
+        });
+        return usuario;
+    }
     ExisteUsuario(PKResidencia, FKNivel) {
         let usuario = new Promise((resolve, reject) => {
             const httpOptions = {
@@ -2751,6 +2924,129 @@ let ResidenciasProvider = class ResidenciasProvider {
             let Model = {
                 PKResidencia: PKResidencia,
                 FKNivel: FKNivel
+            };
+            let Peticion = {
+                Model: JSON.stringify(Model),
+                TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+                Formato: 2
+            };
+            this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(val => {
+                // console.log(val);
+                if (val != undefined) {
+                    resolve(val);
+                }
+            }, Error => {
+                console.log("POST call in error", Error);
+                if (Error != undefined) {
+                    reject(Error);
+                }
+            });
+        });
+        return usuario;
+    }
+    ObtenerTAGS(IDDepartamento) {
+        let usuario = new Promise((resolve, reject) => {
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    "Content-type": "application/json"
+                })
+            };
+            let url = this.url_principal + "ObtenerTAGS";
+            let Model = {
+                IDDepartamento: IDDepartamento
+            };
+            let Peticion = {
+                Model: JSON.stringify(Model),
+                TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+                Formato: 2
+            };
+            this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(val => {
+                // console.log(val);
+                if (val != undefined) {
+                    resolve(val);
+                }
+            }, Error => {
+                console.log("POST call in error", Error);
+                if (Error != undefined) {
+                    reject(Error);
+                }
+            });
+        });
+        return usuario;
+    }
+    CrearTAGS(PKUsuario, person_pin, nombre) {
+        let usuario = new Promise((resolve, reject) => {
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    "Content-type": "application/json"
+                })
+            };
+            let url = this.url_principal + "CrearTAGS";
+            let Model = {
+                PKUsuario: PKUsuario,
+                person_pin: person_pin,
+                nombre: nombre
+            };
+            let Peticion = {
+                Model: JSON.stringify(Model),
+                TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+                Formato: 2
+            };
+            this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(val => {
+                // console.log(val);
+                if (val != undefined) {
+                    resolve(val);
+                }
+            }, Error => {
+                console.log("POST call in error", Error);
+                if (Error != undefined) {
+                    reject(Error);
+                }
+            });
+        });
+        return usuario;
+    }
+    ObtenerCuotasTipo(PKResidencia) {
+        let usuario = new Promise((resolve, reject) => {
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    "Content-type": "application/json"
+                })
+            };
+            let url = this.url_principal + "ObtenerCuotasTipo";
+            let Model = {
+                PKResidencia: PKResidencia,
+            };
+            let Peticion = {
+                Model: JSON.stringify(Model),
+                TipoPeticion: this._TipoPeticion.TipoPeticionController.Usuarios,
+                Formato: 2
+            };
+            this.http.post(url, JSON.stringify(Peticion), httpOptions).subscribe(val => {
+                // console.log(val);
+                if (val != undefined) {
+                    resolve(val);
+                }
+            }, Error => {
+                console.log("POST call in error", Error);
+                if (Error != undefined) {
+                    reject(Error);
+                }
+            });
+        });
+        return usuario;
+    }
+    Actualizar(IdCatTipoSuscripcion, Costo) {
+        let usuario = new Promise((resolve, reject) => {
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    "Content-type": "application/json"
+                })
+            };
+            let url = this.url_principal + "CuotasTipoSuscripcion";
+            let Model = {
+                IdCatTipoSuscripcion: IdCatTipoSuscripcion,
+                Costo: Costo
             };
             let Peticion = {
                 Model: JSON.stringify(Model),
@@ -2813,9 +3109,9 @@ let SuscripcionesControllerProvider = class SuscripcionesControllerProvider {
         console.log('Hello Menu Provider');
         this.urlPrincipal = this.config.ApiPagos + 'Suscripciones/';
     }
-    cargarTipos() {
+    cargarTipos(PKResidencia) {
         // const httpOptions = {
-        const url = this.urlPrincipal + 'cargarTipos';
+        const url = this.urlPrincipal + 'cargarTipos?PKResidencia=' + PKResidencia + '';
         return this.http.get(url);
     }
 };
@@ -3382,7 +3678,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\AdanGonzalez\Desktop\AppHaro\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\appharo\src\main.ts */"./src/main.ts");
 
 
 /***/ })

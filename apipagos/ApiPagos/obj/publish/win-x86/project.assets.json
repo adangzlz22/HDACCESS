@@ -9823,11 +9823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+      "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
       "projectName": "ApiPagos",
-      "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+      "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
       "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-      "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\obj\\publish\\win-x86\\",
+      "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\obj\\publish\\win-x86\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9843,11 +9843,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj": {
-              "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj"
+            "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+              "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
             },
-            "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj": {
-              "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj"
+            "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj": {
+              "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj"
             }
           }
         }
@@ -9883,15 +9883,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[3.1.3, 3.1.3]"
+            "version": "[3.1.9, 3.1.9]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[3.1.3, 3.1.3]"
+            "version": "[3.1.9, 3.1.9]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[3.1.3, 3.1.3]"
+            "version": "[3.1.9, 3.1.9]"
           }
         ],
         "frameworkReferences": {
@@ -9902,7 +9902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

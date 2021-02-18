@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj": {}
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj": {}
   },
   "projects": {
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj": {
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
         "projectName": "ApiPagos",
-        "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
         "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\obj\\publish\\win-x86\\",
+        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
               },
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj"
               }
             }
           }
@@ -67,15 +67,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[3.1.3, 3.1.3]"
+              "version": "[3.1.9, 3.1.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[3.1.3, 3.1.3]"
+              "version": "[3.1.9, 3.1.9]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[3.1.3, 3.1.3]"
+              "version": "[3.1.9, 3.1.9]"
             }
           ],
           "frameworkReferences": {
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -95,14 +95,14 @@
         }
       }
     },
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\ClbDatPago.csproj": {
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\ClbDatPago.csproj",
+        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
         "projectName": "ClbDatPago",
-        "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\ClbDatPago.csproj",
+        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
         "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\obj\\",
+        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,11 +118,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
               },
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\ClbUtileria.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\ClbUtileria.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj"
               }
             }
           }
@@ -172,7 +172,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -181,14 +181,14 @@
         }
       }
     },
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj": {
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj",
+        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
         "projectName": "ClbModPago",
-        "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj",
+        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
         "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\obj\\",
+        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,7 +229,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -238,14 +238,14 @@
         }
       }
     },
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj": {
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj",
+        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj",
         "projectName": "ClbNegPago",
-        "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\ClbNegPago.csproj",
+        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\ClbNegPago.csproj",
         "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsNegPago\\obj\\",
+        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsNegPago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -261,11 +261,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\ClbDatPago.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsDatPago\\ClbDatPago.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj"
               },
-              "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj": {
-                "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ClsModPago\\ClbModPago.csproj"
+              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
               }
             }
           }
@@ -293,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -302,14 +302,14 @@
         }
       }
     },
-    "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\ClbUtileria.csproj": {
+    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\ClbUtileria.csproj",
+        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
         "projectName": "ClbUtileria",
-        "projectPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\ClbUtileria.csproj",
+        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
         "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\Util\\obj\\",
+        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -350,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -7,3 +7,12 @@ C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Release\netcorea
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.AssemblyInfo.cs
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.dll
 C:\NovacomSolution\HDAccess\ApiPagos\ApiPagos\ApiPagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\bin\Release\netcoreapp3.1\ClbUtileria.deps.json
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\bin\Release\netcoreapp3.1\ClbUtileria.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\bin\Release\netcoreapp3.1\ClbUtileria.pdb
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.csprojAssemblyReference.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.AssemblyInfoInputs.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.AssemblyInfo.cs
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.csproj.CoreCompileInputs.cache
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.dll
+C:\Users\AdanGonzalez\Desktop\nuevo\HDACCESS\apipagos\Util\obj\Release\netcoreapp3.1\ClbUtileria.pdb

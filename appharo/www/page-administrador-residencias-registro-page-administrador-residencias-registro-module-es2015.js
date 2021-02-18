@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n    <ion-toolbar color=\"tertiary\">\r\n        <ion-title color=\"light\">Registro de residencias</ion-title>\r\n        <ion-buttons slot=\"start\">\r\n            <ion-back-button style=\" color : #fff \" defaultHref=\"page-administrador-residencias\"></ion-back-button>\r\n        </ion-buttons>\r\n    </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n    <br>\r\n    <div class=\"padding\">\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"home\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Nombre de residencia\" [(ngModel)]=\"NombreResidencia\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"keypad\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"number\" placeholder=\"Número de visitas frecuentes\" [(ngModel)]=\"LimVisitasFrecuentes\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"keypad\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"number\" placeholder=\"Número de visitas de un solo uso\" [(ngModel)]=\"LimVisitasUnSoloUso\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-label>Actualizacion de periodo</ion-label>\r\n                <ion-select [(ngModel)]=\"selectedCodeValue\" name=\"selectCode\" \r\n                multiple=\"true\" placeholder=\"Tap to select..\" [selectedText]=\"selectedCodeValue\"\r\n                (ionChange)=\"funciones()\" required >\r\n                      <ion-select-option  (ionChange)=\"funciones()\" *ngFor=\"let code of lstDias\" value=\"{{code.Id}}\">\r\n                          {{code.Dia}}\r\n                      </ion-select-option>\r\n                </ion-select>\r\n          </ion-item>\r\n        <ion-item>\r\n            <ion-label>Correo / WhatsApp</ion-label>\r\n            <ion-toggle slot=\"start\" name=\"cherry\" color=\"danger\" [(ngModel)]=\"WhatsappCorreo\"></ion-toggle>\r\n        </ion-item>\r\n        <ion-item *ngIf=\"Desaparecer\">\r\n            <ion-icon style=\" color : #FF8225 \" name=\"lock\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Token\" [(ngModel)]=\"TokenMercado\"></ion-input>\r\n        </ion-item>\r\n        <ion-item *ngIf=\"Desaparecer\">\r\n            <ion-icon style=\" color : #FF8225 \" name=\"lock\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Key\" [(ngModel)]=\"KeyMercado\"></ion-input>\r\n        </ion-item>\r\n        <ion-item >\r\n            <ion-label>Selecionar Nivel</ion-label>\r\n            <ion-select [(ngModel)]=\"Dispositivo\"  >\r\n              <ion-select-option *ngFor=\"let item of lst\" [value]=\"item\">{{item.NombreDispositivo}}</ion-select-option>\r\n            </ion-select>\r\n          </ion-item>\r\n            <ion-item *ngIf=\"Desaparecer\">\r\n                <ion-label>Fecha Dia Asignado</ion-label>\r\n                <ion-datetime value=\"1990-02-19\" placeholder=\"Select Date\" [(ngModel)]=\"FechaExpiracion\"></ion-datetime>\r\n            </ion-item>\r\n        <br>\r\n        <ion-button color=\"success\" expand=\"block\" shape=\"round\" fill=\"outline\" (click)=\"Guardar()\">{{ ModificTexto }}</ion-button>\r\n        <ion-button *ngIf=\"Desaparecer\" color=\"danger\" expand=\"block\" shape=\"round\" fill=\"outline\" (click)=\"Eliminar()\">Eliminar</ion-button>\r\n    </div>\r\n\r\n</ion-content>"
+module.exports = "<ion-header>\r\n    <ion-toolbar color=\"tertiary\">\r\n        <ion-title color=\"light\">Registro de residencias</ion-title>\r\n        <ion-buttons slot=\"start\">\r\n            <ion-back-button style=\" color : #fff \" defaultHref=\"page-administrador-residencias\"></ion-back-button>\r\n        </ion-buttons>\r\n    </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n    <br>\r\n    <div class=\"padding\">\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"home\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Nombre de residencia\" [(ngModel)]=\"NombreResidencia\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"keypad\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"number\" placeholder=\"Número de visitas frecuentes\" [(ngModel)]=\"LimVisitasFrecuentes\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-icon style=\" color : #FF8225 \" name=\"keypad\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"number\" placeholder=\"Número de visitas de un solo uso\" [(ngModel)]=\"LimVisitasUnSoloUso\"></ion-input>\r\n        </ion-item>\r\n        <ion-item>\r\n            <ion-label>Actualizacion de periodo</ion-label>\r\n                <ion-select [(ngModel)]=\"selectedCodeValue\" name=\"selectCode\" \r\n                multiple=\"true\" placeholder=\"Tap to select..\" [selectedText]=\"selectedCodeValue\"\r\n                (ionChange)=\"funciones()\" required >\r\n                      <ion-select-option  (ionChange)=\"funciones()\" *ngFor=\"let code of lstDias\" value=\"{{code.Id}}\">\r\n                          {{code.Dia}}\r\n                      </ion-select-option>\r\n                </ion-select>\r\n          </ion-item>\r\n        <ion-item>\r\n            <ion-label>Correo / WhatsApp</ion-label>\r\n            <ion-toggle slot=\"start\" name=\"cherry\" color=\"danger\" [(ngModel)]=\"WhatsappCorreo\"></ion-toggle>\r\n        </ion-item>\r\n        <ion-item *ngIf=\"Desaparecer\">\r\n            <ion-icon style=\" color : #FF8225 \" name=\"lock\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Token\" [(ngModel)]=\"TokenMercado\"></ion-input>\r\n        </ion-item>\r\n        <ion-item *ngIf=\"Desaparecer\">\r\n            <ion-icon style=\" color : #FF8225 \" name=\"lock\" slot=\"start\"></ion-icon>\r\n            <ion-input type=\"text\" placeholder=\"Key\" [(ngModel)]=\"KeyMercado\"></ion-input>\r\n        </ion-item>\r\n        <ion-item >\r\n            <ion-label>Selecionar Nivel</ion-label>\r\n            <ion-select [(ngModel)]=\"Dispositivo\"  >\r\n              <ion-select-option *ngFor=\"let item of lst\" [value]=\"item\">{{item.NombreDispositivo}}</ion-select-option>\r\n            </ion-select>\r\n          </ion-item>\r\n            <ion-item *ngIf=\"Desaparecer\">\r\n                <ion-label>Fecha Dia Asignado</ion-label>\r\n                <ion-datetime value=\"1990-02-19\" placeholder=\"Select Date\" [(ngModel)]=\"FechaExpiracion\"></ion-datetime>\r\n            </ion-item>\r\n            <ion-item >\r\n                <ion-label>Selecionar Departamento</ion-label>\r\n                <ion-select [(ngModel)]=\"Departamentos\"  >\r\n                  <ion-select-option *ngFor=\"let item of lstDepartam\" [value]=\"item\">{{item.NombreDepartamento}}</ion-select-option>\r\n                </ion-select>\r\n              </ion-item>\r\n        <br>\r\n        <ion-button color=\"success\" expand=\"block\" shape=\"round\" fill=\"outline\" (click)=\"Guardar()\">{{ ModificTexto }}</ion-button>\r\n        <ion-button *ngIf=\"Desaparecer\" color=\"danger\" expand=\"block\" shape=\"round\" fill=\"outline\" (click)=\"Eliminar()\">Eliminar</ion-button>\r\n    </div>\r\n\r\n</ion-content>"
 
 /***/ }),
 
@@ -97,7 +97,7 @@ PageAdministradorResidenciasRegistroPageModule = tslib__WEBPACK_IMPORTED_MODULE_
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225 ;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZS1hZG1pbmlzdHJhZG9yLXJlc2lkZW5jaWFzLXJlZ2lzdHJvL0M6XFxVc2Vyc1xcQWRhbkdvbnphbGV6XFxEZXNrdG9wXFxBcHBIYXJvL3NyY1xcYXBwXFxwYWdlLWFkbWluaXN0cmFkb3ItcmVzaWRlbmNpYXMtcmVnaXN0cm9cXHBhZ2UtYWRtaW5pc3RyYWRvci1yZXNpZGVuY2lhcy1yZWdpc3Ryby5wYWdlLnNjc3MiLCJzcmMvYXBwL3BhZ2UtYWRtaW5pc3RyYWRvci1yZXNpZGVuY2lhcy1yZWdpc3Ryby9wYWdlLWFkbWluaXN0cmFkb3ItcmVzaWRlbmNpYXMtcmVnaXN0cm8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksZ0NBQUE7QUNBSjs7QURHQTtFQUNJLHNCQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9wYWdlLWFkbWluaXN0cmFkb3ItcmVzaWRlbmNpYXMtcmVnaXN0cm8vcGFnZS1hZG1pbmlzdHJhZG9yLXJlc2lkZW5jaWFzLXJlZ2lzdHJvLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvciB7XHJcbiAgICAvLy0taW9uLWJhY2tncm91bmQtY29sb3I6IGxpbmVhci1ncmFkaWVudCgjZmZiNjE4LCAjZWIxZTA4KTtcclxuICAgIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjUgO1xyXG59XHJcblxyXG4ucGFkZGluZyB7XHJcbiAgICBwYWRkaW5nOiA1JSFpbXBvcnRhbnQ7XHJcbn0iLCIuY29sb3Ige1xuICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiAjRkY4MjI1IDtcbn1cblxuLnBhZGRpbmcge1xuICBwYWRkaW5nOiA1JSAhaW1wb3J0YW50O1xufSJdfQ== */"
+module.exports = ".color {\n  --ion-background-color: #FF8225 ;\n}\n\n.padding {\n  padding: 5% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZS1hZG1pbmlzdHJhZG9yLXJlc2lkZW5jaWFzLXJlZ2lzdHJvL0M6XFxVc2Vyc1xcQWRhbkdvbnphbGV6XFxEZXNrdG9wXFxudWV2b1xcSERBQ0NFU1NcXGFwcGhhcm8vc3JjXFxhcHBcXHBhZ2UtYWRtaW5pc3RyYWRvci1yZXNpZGVuY2lhcy1yZWdpc3Ryb1xccGFnZS1hZG1pbmlzdHJhZG9yLXJlc2lkZW5jaWFzLXJlZ2lzdHJvLnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGFnZS1hZG1pbmlzdHJhZG9yLXJlc2lkZW5jaWFzLXJlZ2lzdHJvL3BhZ2UtYWRtaW5pc3RyYWRvci1yZXNpZGVuY2lhcy1yZWdpc3Ryby5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSxnQ0FBQTtBQ0FKOztBREdBO0VBQ0ksc0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UtYWRtaW5pc3RyYWRvci1yZXNpZGVuY2lhcy1yZWdpc3Ryby9wYWdlLWFkbWluaXN0cmFkb3ItcmVzaWRlbmNpYXMtcmVnaXN0cm8ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNSA7XHJcbn1cclxuXHJcbi5wYWRkaW5nIHtcclxuICAgIHBhZGRpbmc6IDUlIWltcG9ydGFudDtcclxufSIsIi5jb2xvciB7XG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjUgO1xufVxuXG4ucGFkZGluZyB7XG4gIHBhZGRpbmc6IDUlICFpbXBvcnRhbnQ7XG59Il19 */"
 
 /***/ }),
 
@@ -126,6 +126,7 @@ let PageAdministradorResidenciasRegistroPage = class PageAdministradorResidencia
         this.route = route;
         this.ResiProvi = ResiProvi;
         this.navCtrl = navCtrl;
+        this.lstDepartam = [];
         this.lst = [];
         this.lstDiasActivados = [];
         this.WhatsappCorreo = false;
@@ -162,6 +163,7 @@ let PageAdministradorResidenciasRegistroPage = class PageAdministradorResidencia
     }
     ngOnInit() {
         this.ObtenerNivel();
+        this.ObtenerDepartamento();
         this.lstDiasActivados = [];
     }
     ionViewWillEnter() {
@@ -198,11 +200,27 @@ let PageAdministradorResidenciasRegistroPage = class PageAdministradorResidencia
             console.log(error);
         });
     }
+    ObtenerDepartamento() {
+        this.ResiProvi.ObtenerDepartamento().then(result => {
+            this.lstDepartamentos = JSON.parse(result['Model']);
+            for (let i = 0; i < this.lstDepartamentos.length; i++) {
+                const element = {
+                    IDDepartamento: this.lstDepartamentos[i].id,
+                    NombreDepartamento: this.lstDepartamentos[i].nombreDepartamento
+                };
+                this.lstDepartam.push(element);
+            }
+            console.log(this.lstDepartam);
+            console.log('AQUI ANDO DEPARTAMENTO');
+        }).catch(error => {
+            console.log(error);
+        });
+    }
     Guardar() {
         console.log(this.WhatsappCorreo);
         if (this.Desaparecer == false) {
             console.log(this.Dispositivo);
-            this.ResiProvi.CrearResidencias(this.NombreResidencia, this.LimVisitasFrecuentes, this.LimVisitasUnSoloUso, this.WhatsappCorreo, this.lstDiasActivados, this.Dispositivo).then(result => {
+            this.ResiProvi.CrearResidencias(this.NombreResidencia, this.LimVisitasFrecuentes, this.LimVisitasUnSoloUso, this.WhatsappCorreo, this.lstDiasActivados, this.Dispositivo, this.Departamentos).then(result => {
                 console.log(result);
                 this.navCtrl.pop();
             }).catch(error => {
@@ -210,7 +228,7 @@ let PageAdministradorResidenciasRegistroPage = class PageAdministradorResidencia
             });
         }
         else {
-            this.ResiProvi.ActualizarResidencias(this.PKResidencia, this.NombreResidencia, this.LimVisitasFrecuentes, this.LimVisitasUnSoloUso, this.WhatsappCorreo, this.lstDiasActivados, this.Dispositivo, this.TokenMercado, this.KeyMercado, this.FechaExpiracion).then(result => {
+            this.ResiProvi.ActualizarResidencias(this.PKResidencia, this.NombreResidencia, this.LimVisitasFrecuentes, this.LimVisitasUnSoloUso, this.WhatsappCorreo, this.lstDiasActivados, this.Dispositivo, this.TokenMercado, this.KeyMercado, this.FechaExpiracion, this.Departamentos).then(result => {
                 console.log(result);
                 this.navCtrl.pop();
             }).catch(error => {

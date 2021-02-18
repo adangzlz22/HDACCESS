@@ -97,7 +97,7 @@ PageClienteDashboardPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".color {\n  --ion-background-color: #FF8225 ;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZS1jbGllbnRlLWRhc2hib2FyZC9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcQXBwSGFyby9zcmNcXGFwcFxccGFnZS1jbGllbnRlLWRhc2hib2FyZFxccGFnZS1jbGllbnRlLWRhc2hib2FyZC5wYWdlLnNjc3MiLCJzcmMvYXBwL3BhZ2UtY2xpZW50ZS1kYXNoYm9hcmQvcGFnZS1jbGllbnRlLWRhc2hib2FyZC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSxnQ0FBQTtBQ0FKIiwiZmlsZSI6InNyYy9hcHAvcGFnZS1jbGllbnRlLWRhc2hib2FyZC9wYWdlLWNsaWVudGUtZGFzaGJvYXJkLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb2xvciB7XHJcbiAgICAvLy0taW9uLWJhY2tncm91bmQtY29sb3I6IGxpbmVhci1ncmFkaWVudCgjZmZiNjE4LCAjZWIxZTA4KTtcclxuICAgIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjUgO1xyXG59XHJcbiIsIi5jb2xvciB7XG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6ICNGRjgyMjUgO1xufSJdfQ== */"
+module.exports = ".color {\n  --ion-background-color: #FF8225 ;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZS1jbGllbnRlLWRhc2hib2FyZC9DOlxcVXNlcnNcXEFkYW5Hb256YWxlelxcRGVza3RvcFxcbnVldm9cXEhEQUNDRVNTXFxhcHBoYXJvL3NyY1xcYXBwXFxwYWdlLWNsaWVudGUtZGFzaGJvYXJkXFxwYWdlLWNsaWVudGUtZGFzaGJvYXJkLnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGFnZS1jbGllbnRlLWRhc2hib2FyZC9wYWdlLWNsaWVudGUtZGFzaGJvYXJkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGdDQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9wYWdlLWNsaWVudGUtZGFzaGJvYXJkL3BhZ2UtY2xpZW50ZS1kYXNoYm9hcmQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbG9yIHtcclxuICAgIC8vLS1pb24tYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KCNmZmI2MTgsICNlYjFlMDgpO1xyXG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNSA7XHJcbn1cclxuIiwiLmNvbG9yIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogI0ZGODIyNSA7XG59Il19 */"
 
 /***/ }),
 
@@ -204,14 +204,14 @@ let PageClienteDashboardPage = class PageClienteDashboardPage {
         });
     }
     CargarTotal() {
-        this.TiposSus.cargarTipos().subscribe((response) => {
+        this.TiposSus.cargarTipos(this._UsuPro.FKResidencia).subscribe((response) => {
             // console.log(val);
             if (response.mensajeError) {
                 console.warn(response.mensajeError);
             }
             this.tiposSuscripciones = response.resultado;
             console.log(this.tiposSuscripciones);
-            this.Total = this.tiposSuscripciones[0].costo;
+            // this.Total=this.tiposSuscripciones[0].costo;
         }, Error => {
             console.log('POST call in Agregar', Error);
             if (Error != undefined) {
@@ -256,6 +256,12 @@ let PageClienteDashboardPage = class PageClienteDashboardPage {
         }
         if (item.Opcion1 == "Roles") {
             this.navCtrl.navigateRoot('page-administrador-roles');
+        }
+        if (item.Opcion1 == "Asignar Tags") {
+            this.navCtrl.navigateRoot('tags');
+        }
+        if (item.Opcion1 == "Cuotas") {
+            this.navCtrl.navigateRoot('cuotas');
         }
         if (item.Opcion1 == 'Pagos') {
             let page = '', msgError = 'no hay pagina de pagos para este tipo de usuario';

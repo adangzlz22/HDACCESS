@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M3Pns8VmT7yIp2rkGXzolOUnbK14pak6FJIUDYUFLsfjpT4rNHeOHb8Oc+OTO6zOXcq9YG3ReU0yFyiXOUNyDQ==",
+  "dgSpecHash": "8qDwXQNgHhldlMcTCKUVG05DS5f6dPjdJqJHfh3HjD2rP1Vw9AxFQpdHj++guMZFp2yicIEFZWjztWoR6cyL3Q==",
   "success": true,
-  "projectFilePath": "C:\\NovacomSolution\\HDAccess\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos\\ApiPagos.csproj",
+  "projectFilePath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ApiPagos\\ApiPagos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\mercadopago-sdk\\1.6.1\\mercadopago-sdk.1.6.1.nupkg.sha512",
@@ -155,9 +155,9 @@
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\AdanGonzalez\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.3\\microsoft.netcore.app.runtime.win-x86.3.1.3.nupkg.sha512",
-    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.3\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.3.nupkg.sha512",
-    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.3\\microsoft.aspnetcore.app.runtime.win-x86.3.1.3.nupkg.sha512"
+    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.9\\microsoft.netcore.app.runtime.win-x86.3.1.9.nupkg.sha512",
+    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.9\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.9.nupkg.sha512",
+    "C:\\Users\\AdanGonzalez\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.9\\microsoft.aspnetcore.app.runtime.win-x86.3.1.9.nupkg.sha512"
   ],
   "logs": [
     {
