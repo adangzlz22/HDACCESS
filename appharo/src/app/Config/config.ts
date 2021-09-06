@@ -12,7 +12,7 @@ APIURLCODIGOS = 'http://apicodigos.harodoors.eu/Api/';
 
 ApiPagos = 'http://apipagos.harodoors.eu/Api/';
 // ApiPagos = 'https://localhost:44318/Api/';
-
+ 
  constructor() {
     console.log('Hello ConfigProvider Provider');
   }
