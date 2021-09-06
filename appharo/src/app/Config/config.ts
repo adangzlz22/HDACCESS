@@ -6,10 +6,11 @@ export class ConfigProvider {
 
     public static APIURL:string;
 
-APIURL ='http://apiharodoor.harodoor.eu/Api/';
+APIURL ='http://apiharodoor.harodoors.eu/Api/';
 // APIURL ='http://localhost:50739/Api/';
-APIURLCODIGOS = 'https://apicodigos.harodoor.eu/Api/';
-ApiPagos = 'https://apipagos.harodoor.eu/Api/';
+APIURLCODIGOS = 'http://apicodigos.harodoors.eu/Api/';
+
+ApiPagos = 'http://apipagos.harodoors.eu/Api/';
 // ApiPagos = 'https://localhost:44318/Api/';
 
  constructor() {

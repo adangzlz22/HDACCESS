@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {}
+    "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {
+    "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
+        "projectUniqueName": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
         "projectName": "ClbDatPago",
-        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
-        "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsDatPago\\obj\\",
+        "projectPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsDatPago\\ClbDatPago.csproj",
+        "packagesPath": "C:\\Users\\Adan Glez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsDatPago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adan Glez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,12 +26,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
-                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
+              "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+                "projectPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj"
               },
-              "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
-                "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj"
+              "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
+                "projectPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj"
               }
             }
           }
@@ -44,6 +45,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -81,26 +83,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
+    "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
+        "projectUniqueName": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
         "projectName": "ClbModPago",
-        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
-        "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\ClsModPago\\obj\\",
+        "projectPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\ClbModPago.csproj",
+        "packagesPath": "C:\\Users\\Adan Glez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\ClsModPago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adan Glez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,6 +109,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -123,6 +121,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -138,26 +137,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
+    "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
+        "projectUniqueName": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
         "projectName": "ClbUtileria",
-        "projectPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
-        "packagesPath": "C:\\Users\\AdanGonzalez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AdanGonzalez\\Desktop\\nuevo\\HDACCESS\\apipagos\\Util\\obj\\",
+        "projectPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\ClbUtileria.csproj",
+        "packagesPath": "C:\\Users\\Adan Glez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adan Glez\\OneDrive\\Documentos\\HARODOOR\\HDACCESS\\apipagos\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AdanGonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adan Glez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,6 +163,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -180,6 +175,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -195,12 +191,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
         }
       }
     }
